@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Exchange</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="preload" href="assets/images/logo.png" as="image">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <style>
+        .loader {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99999999;
+            background: #033053;
+            margin: auto;
+            -webkit-transition: all 1s .1s ease-in-out;
+            -o-transition: all 1s .1s ease-in-out;
+            transition: all 1s .1s ease-in-out
+        }
+    
+        .loader .in_loader {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            height: 100%;
+            -webkit-transition: all 1s .1s ease-in-out;
+            -o-transition: all 1s .1s ease-in-out;
+            transition: all 1s .1s ease-in-out
+        }
+    
+        .is-loaded .loader {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+    
+        .loader .loader-img {
+            margin: 0;
+            text-align: center
+        }
+    
+        .loader .loader-img img {
+            max-width: 320px;
+            width: 100%;
+            height: auto
+        }
+    
+        @media only screen and (max-width: 767px) {
+            .loader .loader-img img {
+                max-width: 70vw;
+            }
+        }
+    
+        .is-loaded .loader .in_loader {
+            -webkit-transform: scale(.5) translateY(100%);
+            -ms-transform: scale(.5) translateY(100%);
+            transform: scale(.5) translateY(100%);
+            -webkit-transform-origin: center bottom;
+            -ms-transform-origin: center bottom;
+            transform-origin: center bottom;
+        }
+    
+        .pre_loaderSvg {
+            position: absolute;
+            left: 5vh;
+            top: 5vh;
+            width: calc(100% - 10vh);
+            height: calc(100% - 10vh);
+        }
+    
+        @media only screen and (max-width: 767px) {
+            .pre_loaderSvg {
+                position: absolute;
+                left: 15px;
+                top: 15px;
+                width: calc(100% - 30px);
+                height: calc(100% - 30px);
+            }
+        }
+    
+        .is-loaded .loader {
+            pointer-events: none
+        }
+    </style></head>
+
+<body class="home__page __index">
+    <header id="header">
+      <div class="navbar ">
+        <div class="barnd_box left_">
+          <a class="navbar-brand" href="index.html" title="">
+            <img src="assets/images/logo.svg" alt="">
+          </a>
+        </div>
+        <div class="nav_box_wrapper" id="master_menu"> 
+    
+          <nav class="navbar-inner">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a href="about.html" class="nav-link " aria-title="">
+                  <span>ABOUT</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link " aria-title="">
+                  <span>THE EXCHANGE</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="members.html" class="nav-link " aria-title="">
+                  <span>PLAN YOUR VISIT</span>
+                </a>
+              </li>
+    
+               <li class="hdr_btn">
+                <a class="" href="#" title=""><span>GET INVOLVED</span></a>
+              </li>
+              
+              <li class="no_hide">
+              <a class="lang_ " href="index_ar.html" title=""><span>ع</span></a>
+            </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header><div class="loader">
+    <div class="in_loader">
+        <div class="loader-block">
+            <div class="loader-img">
+                <img src="assets/images/logo.svg" alt="">
+            </div>
+        </div>
+    </div>
+</div><main>
+  <section class="home-banner" id="home">
+  
+      <div class="banner_img">
+          <picture>
+              <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
+              <source srcset="assets/images/banner-img.jpg" type="image/jpeg">
+              <img src="assets/images/banner-img.jpg" loading="lazy" alt="">
+          </picture>
+      </div>
+      
+      <div class="banner_cap">
+          <h1><span>JOIN OUR DRIVE </span> FOR SOCIAL IMPACT</h1>
+      </div>
+      
+  </section>  
+    <section class="home-section about_sec">
+      <div class="container">
+        <div class="inner_">
+          <div class="img_wrap">
+              <picture>
+                <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
+                <source srcset="assets/images/about-img.jpg" type="image/jpeg">
+                <img src="assets/images/about-img.jpg" loading="lazy" alt="">
+            </picture>
+          </div>
+          <div class="text_wrap">
+            <h3>Meet the people making an impact in Abu Dhabi & see how your ideas can change our society.</h3>
+            <div class="text_box">
+              <p>The Exchange by the Authority of Social Contribution Ma’an is a space for everyone.</p>
+
+              <p>In this social innovation platform, you can find <span class="yellow_txt"> inspiration, join a free workshop,</span> and <span class="yellow_txt"> meet like-minded people</span> who are passionate about helping others.</p>
+
+              <p>Here, you can also learn more about Ma’an, and take steps towards growing your own enterprise.</p>
+            </div>
+            <div class="btn_wrap">
+              <a href="#">This years themes <span> <img src="assets/images/arrow-svg.svg" /> </span> </a>
+            </div>
+          </div>
+        </div>
+        <div class="about_link_"><span>About The Exchange</span></div>
+      </div>
+    </section>
+
+    <section class="home-section comunity_sec">
+      <div class="inner_">
+        <div class="center_div">
+          <div class="half_ text_">
+            <div class="content_">
+                <h2>JOIN OUR <br /> COMMUNITY</h2>
+                <div class="text_box">
+                  <p>Discover the story of Ma’an and social initiatives across Abu Dhabi and exchange your ideas with us</p>
+                </div>
+              </div>
+          </div>
+          <div class="half_ img_div">
+            <div class="img_wrap">
+                <picture>
+                    <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
+                    <source srcset="assets/images/img1.jpg" type="image/jpeg">
+                    <img src="assets/images/img1.jpg" loading="lazy" alt="">
+                </picture>
+              </div>
+          </div>
+        </div>
+
+        <div class="lf_div">
+          <div class="half_ text_">
+            <div class="content_">
+                <h2>GET<br />
+INSPIRED</h2>
+                <div class="text_box">
+                  <p>Learn the uplifting stories of the social enterprises working to improve accessibility and inclusion</p>
+                </div>
+              </div>
+          </div>
+          <div class="half_ img_div">
+            <div class="img_wrap">
+                <picture>
+                    <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
+                    <source srcset="assets/images/img2.jpg" type="image/jpeg">
+                      <img src="assets/images/img2.jpg" loading="lazy" alt="">
+                </picture>
+              </div>
+          </div>
+        </div>
+
+        <div class="rgt_div">
+          <div class="half_ text_">
+            <div class="content_">
+                <h2>LEARN FROM <br/> OTHERS</h2>
+                <div class="text_box">
+                  <p>Hear insightful and motivating talks, and ask our specialist speakers for their opinions.</p>
+                </div>
+              </div>
+          </div>
+          <div class="half_ img_div">
+            <div class="img_wrap">
+                <picture>
+                    <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
+                    <source srcset="assets/images/img3.jpg" type="image/jpeg">
+                      <img src="assets/images/img3.jpg" loading="lazy" alt="">
+                </picture>
+              </div>
+          </div>
+        </div>
+
+        <div class="center_div reverse_">
+          <div class="half_ text_">
+            <div class="content_">
+                <h2>MAKE NEW <br/> CONNECTIONS</h2>
+                <div class="text_box">
+                  <p>Work on your projects and meet your future collaborators.</p>
+                </div>
+              </div>
+          </div>
+          <div class="half_ img_div">
+            <div class="img_wrap">
+                <picture>
+                    <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
+                    <source srcset="assets/images/img4.jpg" type="image/jpeg">
+                    <img src="assets/images/img4.jpg" loading="lazy" alt="">
+                </picture>
+              </div>
+          </div>
+        </div>
+
+        <div class="center_div">
+          <div class="half_ text_">
+            <div class="content_">
+                <h2>GET<br/> INVOLVED</h2>
+                <div class="text_box">
+                  <p>Join collaborative discussions and hands-on workshops where you can share ideas for impact.</p>
+                </div>
+              </div>
+          </div>
+          <div class="half_ img_div">
+            <div class="img_wrap">
+                <picture>
+                    <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
+                    <source srcset="assets/images/img5.jpg" type="image/jpeg">
+                    <img src="assets/images/img5.jpg" loading="lazy" alt="">
+                </picture>
+              </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        
+        </div>
+    </section>
+
+
+    <section class="home-section inspire_sec">
+      <div class="container">
+        <div class="inner_">
+          <div class="title_">
+            <h2>TOGETHER <br/> WE <br/> INPIRE <span> OUR <br/> COMMUNITY</span></h2>
+          </div>
+
+          <div class="insp_box_">
+            <div class="title_field">
+              <h3 class="title_">Get Involved</h3>
+              <div class="filter_box"> 
+                <a href="#" class="filter_">Filter</a>
+                <div class="input-field select_box">
+                  <select name="subject">
+                    <option value="">All</option>
+                    <option value="1">Test</option>
+                    <option value="1">Test</option>
+                  </select>
+                </div>
+                <a href="#" class="view_all">View All</a>
+              </div>
+            </div>
+
+            <div class="involed_wraper">
+              <div class="box_" style="background: #0038AE;">
+                <div class="top_content_">
+                  <h3 style="color: #FFD000;">PANELS</h3>
+                  <div class="date_">11 February 2020 <span class="date_spn"> 2.00 pm - 4.45 pm</span></div>
+                  <h2 style="color: #FFD000;">Question and Answer Session for CEO of Lorem Ipsum - Kholoud Mustafi</h2>
+                </div>
+                <div class="bx_btm">
+                  <a href="#" class="rd_more">Read More</a>
+                  <a href="#" class="rgster" style="color: #FFD000;">Register</a>
+                </div>
+              </div>
+              <div class="box_" style="background: #3F1C8E;">
+                <div class="top_content_">
+                  <h3 style="color: #89D2D1;">WORKSPACE</h3>
+                  <div class="date_">11 February 2020 <span class="date_spn"> 2.00 pm - 4.45 pm</span></div>
+                  <h2 style="color: #89D2D1;">Question and Answer Session for CEO of Lorem Ipsum - Kholoud Mustafi</h2>
+                </div>
+                <div class="bx_btm">
+                  <a href="#" class="rd_more">Read More</a>
+                  <a href="#" class="rgster" style="color: #89D2D1;">Register</a>
+                </div>
+              </div>
+              <div class="box_" style="background: #B7ADC6;">
+                <div class="top_content_">
+                  <h3 style="color: #00834B;">MA’AN TASKFORCE</h3>
+                  <div class="date_">11 February 2020 <span class="date_spn"> 2.00 pm - 4.45 pm</span></div>
+                  <h2 style="color: #00834B;">Question and Answer Session for CEO of Lorem Ipsum - Kholoud Mustafi</h2>
+                </div>
+                <div class="bx_btm">
+                  <a href="#" class="rd_more">Read More</a>
+                  <a href="#" class="rgster" style="color: #00834B;">Register</a>
+                </div>
+              </div>
+              <div class="box_" style="background: #E2503F;">
+                <div class="top_content_">
+                  <h3 style="color: #DEDC2A;">MA’AN ROUNDATABLE</h3>
+                  <div class="date_">11 February 2020 <span class="date_spn"> 2.00 pm - 4.45 pm</span></div>
+                  <h2 style="color: #DEDC2A;">Question and Answer Session for CEO of Lorem Ipsum - Kholoud Mustafi</h2>
+                </div>
+                <div class="bx_btm">
+                  <a href="#" class="rd_more">Read More</a>
+                  <a href="#" class="rgster" style="color: #DEDC2A;">Register</a>
+                </div>
+              </div>
+              <div class="box_" style="background: #74D896;">
+                <div class="top_content_">
+                  <h3 style="color: #00834B;">IDEAS LAB</h3>
+                  <div class="date_">11 February 2020 <span class="date_spn"> 2.00 pm - 4.45 pm</span></div>
+                  <h2 style="color: #00834B;">Question and Answer Session for CEO of Lorem Ipsum - Kholoud Mustafi</h2>
+                </div>
+                <div class="bx_btm">
+                  <a href="#" class="rd_more">Read More</a>
+                  <a href="#" class="rgster" style="color: #00834B;">Register</a>
+                </div>
+              </div>
+              <div class="box_" style="background: #FF7800;">
+                <div class="top_content_">
+                  <h3 style="color: #98E0D0;">TALK LOUNGE</h3>
+                  <div class="date_">11 February 2020 <span class="date_spn"> 2.00 pm - 4.45 pm</span></div>
+                  <h2 style="color: #98E0D0;">Question and Answer Session for CEO of Lorem Ipsum - Kholoud Mustafi</h2>
+                </div>
+                <div class="bx_btm">
+                  <a href="#" class="rd_more">Read More</a>
+                  <a href="#" class="rgster" style="color: #98E0D0;">Register</a>
+                </div>
+              </div>
+              <div class="box_" style="background: #90BAC9;">
+                <div class="top_content_">
+                  <h3 style="color: #C6470A;">IMPACT MAKERS INSPIRE SESSION</h3>
+                  <div class="date_">11 February 2020 <span class="date_spn"> 2.00 pm - 4.45 pm</span></div>
+                  <h2 style="color: #C6470A;">Question and Answer Session for CEO of Lorem Ipsum - Kholoud Mustafi</h2>
+                </div>
+                <div class="bx_btm">
+                  <a href="#" class="rd_more">Read More</a>
+                  <a href="#" class="rgster" style="color: #C6470A;">Register</a>
+                </div>
+              </div>
+              <div class="box_" style="background: #541226;">
+                <div class="top_content_">
+                  <h3 style="color: #6E72BF;">MA’AN FAMILY</h3>
+                  <div class="date_">11 February 2020 <span class="date_spn"> 2.00 pm - 4.45 pm</span></div>
+                  <h2 style="color: #6E72BF;">Question and Answer Session for CEO of Lorem Ipsum - Kholoud Mustafi</h2>
+                </div>
+                <div class="bx_btm">
+                  <a href="#" class="rd_more">Read More</a>
+                  <a href="#" class="rgster" style="color: #6E72BF;">Register</a>
+                </div>
+              </div>
+              <div class="box_" style="background: #3F1C8E;">
+                <div class="top_content_">
+                  <h3 style="color: #89D2D1;">WORKSPACE</h3>
+                  <div class="date_">11 February 2020 <span class="date_spn"> 2.00 pm - 4.45 pm</span></div>
+                  <h2 style="color: #89D2D1;">Question and Answer Session for CEO of Lorem Ipsum - Kholoud Mustafi</h2>
+                </div>
+                <div class="bx_btm">
+                  <a href="#" class="rd_more">Read More</a>
+                  <a href="#" class="rgster" style="color: #89D2D1;">Register</a>
+                </div>
+              </div>
+              <div class="box_ load_more" style="background: #fff;">
+                <a href="#" class="btn_">Load More <span class="plus">+</span> </a>
+              </div>
+            </div>
+
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  
+</main>
+
+
+<script src="assets/scripts/lib/modernizr.min.js"></script>
+<script src="assets/scripts/lib/jquery-3.4.1.min.js"></script>
+<script src="assets/scripts/lib/jquery-migrate-3.0.1.min.js"></script>
+<script src="assets/scripts/min/home_plugins.js"></script>
+<script src="assets/scripts/min/home.js"></script>
+
+<script>
+
+
+    
+</script><footer>
+  <div class="container">
+
+    <div class="social_wrap_box">
+      <ul>
+        <li>
+          <a href="#" class="link_">
+            <svg viewBox="0 0 23.333 18.958">
+              <path
+                d="M23.333,66.244A9.974,9.974,0,0,1,20.577,67a4.757,4.757,0,0,0,2.1-2.644,9.56,9.56,0,0,1-3.033,1.158,4.783,4.783,0,0,0-8.275,3.271,4.926,4.926,0,0,0,.111,1.091,13.54,13.54,0,0,1-9.86-5,4.785,4.785,0,0,0,1.47,6.393,4.724,4.724,0,0,1-2.161-.589v.053a4.806,4.806,0,0,0,3.832,4.7,4.775,4.775,0,0,1-1.254.157,4.229,4.229,0,0,1-.906-.082,4.829,4.829,0,0,0,4.47,3.332,9.612,9.612,0,0,1-5.931,2.04A8.959,8.959,0,0,1,0,80.812a13.467,13.467,0,0,0,7.338,2.147A13.521,13.521,0,0,0,20.953,69.346c0-.211-.007-.416-.018-.618A9.543,9.543,0,0,0,23.333,66.244Z"
+                transform="translate(0 -64)" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="link_">
+            <svg viewBox="0 0 20.443 20.02">
+              <g transform="translate(0 -0.389)">
+                <rect width="4.572" height="14.054" transform="translate(0 6.353)" />
+                <path
+                  d="M170.635,160.165c-.049-.015-.095-.032-.146-.046s-.123-.026-.185-.036a4.1,4.1,0,0,0-.82-.083h0a6.352,6.352,0,0,0-4.913,2.687V160H160v14.054h4.572v-7.666s3.455-4.812,4.913-1.278v8.944h4.57V164.57A4.558,4.558,0,0,0,170.635,160.165Z"
+                  transform="translate(-153.612 -153.647)" />
+                <circle cx="2" cy="2" r="2" transform="translate(0 0.389)" />
+              </g>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="link_">
+            <svg viewBox="0 0 20.443 20.442">
+              <path
+                d="M14.054,0H6.388A6.389,6.389,0,0,0,0,6.388v7.666a6.389,6.389,0,0,0,6.388,6.388h7.666a6.389,6.389,0,0,0,6.388-6.388V6.388A6.389,6.389,0,0,0,14.054,0Zm4.472,14.054a4.477,4.477,0,0,1-4.472,4.472H6.388a4.477,4.477,0,0,1-4.472-4.472V6.388A4.477,4.477,0,0,1,6.388,1.917h7.666a4.477,4.477,0,0,1,4.472,4.472Z" />
+              <path
+                d="M133.111,128a5.111,5.111,0,1,0,5.111,5.111A5.111,5.111,0,0,0,133.111,128Zm0,8.3a3.194,3.194,0,1,1,3.194-3.194A3.2,3.2,0,0,1,133.111,136.3Z"
+                transform="translate(-122.889 -122.889)" />
+              <ellipse cx="0.681" cy="0.681" rx="0.681" ry="0.681" transform="translate(15.034 4.046)" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="inner center">
+      <p>Copyright © 2021 All rights reserved. Ministry of Industry and Advanced Technology</p>
+    </div>
+  </div>
+  <div class="progress-wrap">
+    <div class="icon_">
+      <svg x="0px" y="0px" viewBox="0 0 21.8 28" overflow="visible" xml:space="preserve">
+        <line fill="none" stroke="#033053" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+          x1="10.9" y1="24.8" x2="10.9" y2="3.7" />
+        <polyline fill="none" stroke="#033053" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+          points="2.7,11.6 
+	10.9,3.3 19.2,11.6 " />
+      </svg>
+    </div>
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+    </svg>
+  </div>
+</footer>
+<script>
+  $('select').selectric({ disableOnMobile: false, nativeOnMobile: false });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html class="rtl" dir="rtl" lang="ar">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Exchange</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="preload" href="assets/images/logo.png" as="image">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/main-rtl.css">
+
+    <style>
+        .loader {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99999999;
+            background: #033053;
+            margin: auto;
+            -webkit-transition: all 1s .1s ease-in-out;
+            -o-transition: all 1s .1s ease-in-out;
+            transition: all 1s .1s ease-in-out
+        }
+    
+        .loader .in_loader {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            height: 100%;
+            -webkit-transition: all 1s .1s ease-in-out;
+            -o-transition: all 1s .1s ease-in-out;
+            transition: all 1s .1s ease-in-out
+        }
+    
+        .is-loaded .loader {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+    
+        .loader .loader-img {
+            margin: 0;
+            text-align: center
+        }
+    
+        .loader .loader-img img {
+            max-width: 320px;
+            width: 100%;
+            height: auto
+        }
+    
+        @media only screen and (max-width: 767px) {
+            .loader .loader-img img {
+                max-width: 70vw;
+            }
+        }
+    
+        .is-loaded .loader .in_loader {
+            -webkit-transform: scale(.5) translateY(100%);
+            -ms-transform: scale(.5) translateY(100%);
+            transform: scale(.5) translateY(100%);
+            -webkit-transform-origin: center bottom;
+            -ms-transform-origin: center bottom;
+            transform-origin: center bottom;
+        }
+    
+        .pre_loaderSvg {
+            position: absolute;
+            left: 5vh;
+            top: 5vh;
+            width: calc(100% - 10vh);
+            height: calc(100% - 10vh);
+        }
+    
+        @media only screen and (max-width: 767px) {
+            .pre_loaderSvg {
+                position: absolute;
+                left: 15px;
+                top: 15px;
+                width: calc(100% - 30px);
+                height: calc(100% - 30px);
+            }
+        }
+    
+        .is-loaded .loader {
+            pointer-events: none
+        }
+    </style></head>
+
+<body class="home__page __index_ar">
+    <header id="header">
+      <div class="navbar ">
+        <div class="barnd_box left_">
+          <a class="navbar-brand" href="index_ar.html" title="">
+            <img src="assets/images/logo.png" alt="">
+          </a>
+        </div>
+        <div class="hd_nav_box">
+          <ul>
+            <li class="no_hide">
+              <button class="menu_trigger" data-traget="master_menu">
+                <div class="box">
+                  <span class="dote_ t_"></span>
+                  <span class="dote_ m_"></span>
+                  <span class="dote_ b_"></span>
+                </div>
+                <div class="box p_">
+                  <span class="dote_ t_"></span>
+                  <span class="dote_ m_"></span>
+                  <span class="dote_ b_"></span>
+                </div>
+              </button>
+            </li>
+            <li class="no_hide">
+              <a class="lang_ " href="index.html" title=""><span>EN</span></a>
+            </li>
+            <li>
+              <a class="mn_link " href="#" title=""><span>أرسل فكرتك</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="barnd_box right_">
+          <a class="navbar-brand" href="index_ar.html" title="">
+            <img src="assets/images/logo_2.png" alt="">
+          </a>
+        </div>
+        <div class="nav_box_wrapper" id="master_menu">
+    
+          <div class="svg_dot_box">
+            <svg data-dash data-top data-right></svg>
+          </div>
+          <nav class="navbar-inner">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a href="index_ar.html" class="nav-link " aria-title="">
+                  <i>مسكن</i>
+                  <span>مسكن</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="about_ar.html" class="nav-link " aria-title="">
+                  <i>عن</i>
+                  <span>عن</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link " aria-title="">
+                  <i>أهداف</i>
+                  <span>أهداف</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="members_ar.html" class="nav-link " aria-title="">
+                  <i>أعضاء</i>
+                  <span>أعضاء</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="initiatives_ar.html" class="nav-link " aria-title="">
+                  <i>المبادرات</i>
+                  <span>المبادرات</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index_ar.html?#submit_idea" class="nav-link scroll" data-href="#submit_idea" aria-title="">
+                  <i>أرسل فكرتك</i>
+                  <span>أرسل فكرتك</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header><div class="loader">
+    <div class="in_loader">
+        <div class="loader-block">
+            <div class="loader-img">
+                <img src="assets/images/logo.svg" alt="">
+            </div>
+        </div>
+    </div>
+</div><main>
+  <section class="home-banner" id="home">
+      <div class="bg_video_wrap">
+          <video autoplay muted loop>
+              <source src="assets/video/video.mp4" type="video/mp4">
+              متصفحك الحالي لا يدعم تشغيل الفيديو.
+          </video>
+      </div>
+      <div class="social_wrap">
+          <ul>
+              <li>
+                  <a href="#" class="link_">
+                      <svg viewBox="0 0 23.333 18.958">
+                          <path
+                              d="M23.333,66.244A9.974,9.974,0,0,1,20.577,67a4.757,4.757,0,0,0,2.1-2.644,9.56,9.56,0,0,1-3.033,1.158,4.783,4.783,0,0,0-8.275,3.271,4.926,4.926,0,0,0,.111,1.091,13.54,13.54,0,0,1-9.86-5,4.785,4.785,0,0,0,1.47,6.393,4.724,4.724,0,0,1-2.161-.589v.053a4.806,4.806,0,0,0,3.832,4.7,4.775,4.775,0,0,1-1.254.157,4.229,4.229,0,0,1-.906-.082,4.829,4.829,0,0,0,4.47,3.332,9.612,9.612,0,0,1-5.931,2.04A8.959,8.959,0,0,1,0,80.812a13.467,13.467,0,0,0,7.338,2.147A13.521,13.521,0,0,0,20.953,69.346c0-.211-.007-.416-.018-.618A9.543,9.543,0,0,0,23.333,66.244Z"
+                              transform="translate(0 -64)" fill="#f5f5f5" />
+                      </svg>
+                  </a>
+              </li>
+              <li>
+                  <a href="#" class="link_">
+  
+                      <svg viewBox="0 0 20.443 20.019">
+                          <rect width="4.572" height="14.054" transform="translate(0 5.965)" fill="#fff" />
+                          <path
+                              d="M170.635,160.165c-.049-.015-.095-.032-.146-.046s-.123-.026-.185-.036a4.1,4.1,0,0,0-.82-.083h0a6.352,6.352,0,0,0-4.913,2.687V160H160v14.054h4.572v-7.666s3.455-4.812,4.913-1.278v8.944h4.57V164.57A4.558,4.558,0,0,0,170.635,160.165Z"
+                              transform="translate(-153.611 -154.035)" fill="#fff" />
+                          <circle cx="2" cy="2" r="2" fill="#fff" />
+                      </svg>
+                  </a>
+              </li>
+              <li>
+                  <a href="#" class="link_">
+                      <svg viewBox="0 0 20.443 20.443">
+                          <path
+                              d="M14.054,0H6.388A6.389,6.389,0,0,0,0,6.388v7.666a6.389,6.389,0,0,0,6.388,6.388h7.666a6.389,6.389,0,0,0,6.388-6.388V6.388A6.389,6.389,0,0,0,14.054,0Zm4.472,14.054a4.477,4.477,0,0,1-4.472,4.472H6.388a4.477,4.477,0,0,1-4.472-4.472V6.388A4.477,4.477,0,0,1,6.388,1.917h7.666a4.477,4.477,0,0,1,4.472,4.472Z"
+                              fill="#fff" />
+                          <path
+                              d="M133.111,128a5.111,5.111,0,1,0,5.111,5.111A5.111,5.111,0,0,0,133.111,128Zm0,8.3a3.194,3.194,0,1,1,3.194-3.194A3.2,3.2,0,0,1,133.111,136.3Z"
+                              transform="translate(-122.889 -122.889)" fill="#fff" />
+                          <ellipse cx="0.681" cy="0.681" rx="0.681" ry="0.681" transform="translate(15.034 4.046)"
+                              fill="#fff" />
+                      </svg>
+                  </a>
+              </li>
+  
+          </ul>
+      </div>
+      <div class="container">
+          <div class="top_svg">
+              <svg data-dash data-top data-right></svg>
+          </div>
+          <div class="banner_text">
+              <h1 data-split-line>الإمارات للبحث والتطوير<strong>مجلس</strong></h1>
+              <div class="more_wrap">
+                  <a href="about_ar.html" class="more">
+                      <i>اقرأ أكثر</i>
+                      <span>اقرأ أكثر</span>
+                  </a>
+              </div>
+          </div>
+  
+          <div class="bottom_svg">
+              <svg data-dash data-right></svg>
+          </div>
+      </div>
+  </section>  <section class="home-section about_section no_padd_top no_padd_bottom" id="about">
+    <div class="container-fluid">
+
+      <div class="about_wrap">
+        <div class="img_box">
+          <div class="bg_svg">
+            <svg data-dash data-bottom data-right data-color="#194177"></svg>
+          </div>
+          <div class="img_1 abs">
+            <picture>
+              <source srcset="assets/images/about_img.webp" type="image/webp">
+              <source srcset="assets/images/about_img.jpg" type="image/jpg">
+              <img src="assets/images/about_img.jpg" loading="lazy" alt="">
+            </picture>
+          </div>
+          <div class="img_2 abs">
+            <picture>
+              <source srcset="assets/images/about_img_2.webp" type="image/webp">
+              <source srcset="assets/images/about_img_2.jpg" type="image/jpg">
+              <img src="assets/images/about_img_2.jpg" loading="lazy" alt="">
+            </picture>
+          </div>
+        </div>
+
+        <div class="content_wrap">
+          <div class="section-small-title">
+            <h3>مجلس</h3>
+          </div>
+          <div class="section-title">
+            <h2>عن</h2>
+          </div>
+
+          <div class="text_box f_in_b">
+            <p>
+              تأسس مجلس الإمارات للبحث والتطوير برئاسة صاحب السمو الشيخ عبدالله بن زايد آل نهيان وزير الخارجية والتعاون
+              الدولي ، بناءً على قرار مجلس الوزراء رقم (4/7) لسنة 2021 ، تم تشكيل القرار بعد موافقة مجلس الوزراء
+              الإماراتي على سياسة حوكمة البحث والتطوير في دولة الإمارات العربية المتحدة ، ...
+            </p>
+          </div>
+          <div class="more_wrap f_in_b f_d_2">
+            <a href="about_ar.html" class="more h_black">
+              <i>اقرأ أكثر</i>
+              <span>اقرأ أكثر</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="home-section key_section " id="key_points">
+    <div class="container">
+      <div class="key_wrap">
+        <div class="key_item">
+          <div class="bg_svg">
+            <svg data-dash data-top data-right data-left data-bottom data-color="#b68a35"></svg>
+          </div>
+
+          <div class="number_" data-number=150>
+            <span>0</span>
+          </div>
+          <div class="title_">
+            <span>المنشورات</span>
+          </div>
+        </div>
+        <div class="key_item">
+          <div class="bg_svg">
+            <svg data-dash data-top data-right data-left data-bottom data-color="#b68a35"></svg>
+          </div>
+
+          <div class="number_" data-number=50>
+            <span>0</span>
+          </div>
+          <div class="title_">
+            <span>مخرجات البحث</span>
+          </div>
+        </div>
+        <div class="key_item">
+          <div class="bg_svg">
+            <svg data-dash data-top data-right data-left data-bottom data-color="#b68a35"></svg>
+          </div>
+
+          <div class="number_" data-number=45>
+            <span>0</span>
+          </div>
+          <div class="title_">
+            <span>تأثير البحث</span>
+          </div>
+        </div>
+        <div class="key_item">
+          <div class="bg_svg">
+            <svg data-dash data-top data-right data-left data-bottom data-color="#b68a35"></svg>
+          </div>
+
+          <div class="number_" data-number=20>
+            <span>0</span>
+          </div>
+          <div class="title_">
+            <span>أهم قطاعات البحث</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="home-section object_section bg_blue" id="objectives">
+
+    <div class="bg_ abs">
+      <picture>
+        <source srcset="assets/images/bg_blue.webp" type="image/webp">
+        <source srcset="assets/images/bg_blue.png" type="image/png">
+        <img src="assets/images/bg_blue.png" loading="lazy" alt="">
+      </picture>
+    </div>
+    <div class="container">
+      <div class="section-small-title">
+        <h3>مجلس</h3>
+      </div>
+      <div class="section-title">
+        <h2>أهداف</h2>
+      </div>
+
+      <div class="objectives_wrap">
+
+        <div class="swiper-container ">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide ob_item g_anim">
+              <a href="#" class="inner_">
+                <div class="number_">
+                  01
+                </div>
+                <div class="img_box">
+                  <div class="bg_span">
+                    <span class="bg_h">
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                    </span>
+                  </div>
+
+                  <picture>
+                    <img src="assets/images/ob_img_1.svg" loading="lazy" alt="">
+                  </picture>
+                </div>
+                <div class="text_box">
+                  <p><strong>تعزيز حوكمة البحث والتطوير</strong> القطاع من خلال مركزية صنع القرار فيه وتوحيد الجهود
+                    ومراقبة الأداء</p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide ob_item g_anim">
+              <a href="#" class="inner_">
+                <div class="number_">
+                  02
+                </div>
+                <div class="img_box">
+                  <div class="bg_span">
+                    <span class="bg_h">
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                    </span>
+                  </div>
+                  <picture>
+                    <img src="assets/images/ob_img_2.svg" loading="lazy" alt="">
+                  </picture>
+                </div>
+                <div class="text_box">
+                  <p><strong>تحقيق التوافق والتنسيق والشراكة على المستوى الوطني</strong> في أولويات وتوجهات وسياسات
+                    البحث والتطوير في دولة الإمارات العربية المتحدة</p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide ob_item g_anim">
+              <a href="#" class="inner_">
+                <div class="number_">
+                  03
+                </div>
+                <div class="img_box">
+                  <div class="bg_span">
+                    <span class="bg_h">
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                    </span>
+                  </div>
+                  <picture>
+                    <img src="assets/images/ob_img_3.svg" loading="lazy" alt="">
+                  </picture>
+                </div>
+                <div class="text_box">
+                  <p><strong>تحفيز مشاركة المنظمات الحكومية والأكاديمية والهادفة للربح وغير الهادفة للربح</strong> في
+                    تطوير وتنفيذ مبادرات وبرامج البحث والتطوير للبلد</p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide ob_item g_anim">
+              <a href="#" class="inner_">
+                <div class="number_">
+                  04
+                </div>
+                <div class="img_box">
+                  <div class="bg_span">
+                    <span class="bg_h">
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                    </span>
+                  </div>
+                  <picture>
+                    <img src="assets/images/ob_img_1.svg" loading="lazy" alt="">
+                  </picture>
+                </div>
+                <div class="text_box">
+                  <p><strong>تعزيز حوكمة البحث والتطوير</strong> من خلال مركزية اتخاذ القرار وتوحيد الجهود ومراقبة
+                    الأداء</p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide ob_item g_anim">
+              <a href="#" class="inner_">
+                <div class="number_">
+                  05
+                </div>
+                <div class="img_box">
+                  <div class="bg_span">
+                    <span class="bg_h">
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                    </span>
+                  </div>
+                  <picture>
+                    <img src="assets/images/ob_img_2.svg" loading="lazy" alt="">
+                  </picture>
+                </div>
+                <div class="text_box">
+                  <p><strong>تحقيق التوافق والتنسيق والشراكة على المستوى الوطني</strong> في أولويات وتوجهات وسياسات
+                    البحث والتطوير في دولة الإمارات العربية المتحدة</p>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide ob_item g_anim">
+              <a href="#" class="inner_">
+                <div class="number_">
+                  06
+                </div>
+                <div class="img_box">
+                  <div class="bg_span">
+                    <span class="bg_h">
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                    </span>
+                  </div>
+                  <picture>
+                    <img src="assets/images/ob_img_3.svg" loading="lazy" alt="">
+                  </picture>
+                </div>
+                <div class="text_box">
+                  <p><strong>تحفيز مشاركة المنظمات الحكومية والأكاديمية والهادفة للربح وغير الهادفة للربح</strong> في
+                    تطوير وتنفيذ مبادرات وبرامج البحث والتطوير للبلد</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav_box f_in_b f_d_2">
+          <div class="nav_ left_">
+            <svg viewBox="0 0 38.244 30.572">
+              <path
+                d="M0,15.188a3.549,3.549,0,0,0,.339-.267q7.3-7.3,14.6-14.6c.105-.105.2-.223.285-.321l2.613,2.665L7.3,13.2l.06.117c.1.01.2.028.3.028q15.16,0,30.321,0c.086,0,.173-.015.259-.024V17.2c-.148-.008-.3-.024-.445-.024H7.33L17.949,27.8l-2.783,2.775a1.422,1.422,0,0,0-.2-.335Q7.656,22.917.338,15.607A3.735,3.735,0,0,0,0,15.337Z"
+                fill="#fff" />
+            </svg>
+          </div>
+          <div class="nav_ right_">
+            <svg viewBox="0 0 38.244 30.572">
+              <path
+                d="M38.244,15.188a3.549,3.549,0,0,1-.339-.267q-7.3-7.3-14.6-14.6C23.2.215,23.1.1,23.018,0L20.4,2.665,30.939,13.2l-.06.117c-.1.01-.2.028-.3.028q-15.16,0-30.321,0c-.086,0-.173-.015-.259-.024V17.2c.148-.008.3-.024.445-.024H30.913L20.295,27.8l2.783,2.775a1.422,1.422,0,0,1,.2-.335q7.308-7.319,14.626-14.629a3.736,3.736,0,0,1,.338-.27Z"
+                fill="#fff" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="home-section mandate_section  no_padd_top " id="mandate">
+    <div class="container-fluid">
+      <div class="mandate_wrap">
+        <div class="title_wrap">
+          <div class="svg_top">
+            <svg data-dash data-right data-color="#b68a35"></svg>
+          </div>
+          <div class="t_inn">
+            <div class="section-small-title">
+              <h3>مجلس</h3>
+            </div>
+            <div class="section-title">
+              <h2>امر رسمى</h2>
+            </div>
+
+          </div>
+          <div class="svg_bottom">
+            <svg data-dash data-bottom data-right data-color="#b68a35"></svg>
+          </div>
+        </div>
+
+        <div class="content_wrap">
+          <div class="m_item g_anim">
+            <div class="number_">
+              01
+            </div>
+            <div class="text_box">
+              <p>
+                تقديم المشورة ومراجعة التشريعات العامة والسياسات والاستراتيجيات والبرامج المتعلقة بالبحث و
+                النظام البيئي التنموي في دولة الإمارات العربية المتحدة
+              </p>
+            </div>
+          </div>
+          <div class="m_item g_anim">
+            <div class="number_">
+              02
+            </div>
+            <div class="text_box">
+              <p>
+                مراجعة ومواءمة برامج ومبادرات تمويل البحث والتطوير التي تساهم في تحقيق الأولويات الوطنية والنمو
+                الاقتصادي لدولة الإمارات العربية المتحدة
+              </p>
+            </div>
+          </div>
+          <div class="m_item g_anim">
+            <div class="number_">
+              03
+            </div>
+            <div class="text_box">
+              <p>
+                وضع الإطار العام لتنظيم ومواءمة أنشطة ومكونات البحث والتطوير ، بما في ذلك مصادر وآليات التمويل ، ومدونات
+                قواعد البحث الأخلاقية ، وحوكمة البحث في المؤسسات والمراكز الأكاديمية والبحثية والعلمية ، والجوانب
+                التنظيمية الأخرى
+              </p>
+            </div>
+          </div>
+          <div class="m_item g_anim">
+            <div class="number_">
+              04
+            </div>
+            <div class="text_box">
+              <p>
+                إقرار أولويات البحث والتطوير في القطاعات والمجالات والمجالات المستهدفة بما يتماشى مع التوجهات
+                الاستراتيجية الوطنية والأولويات المعتمدة
+              </p>
+            </div>
+          </div>
+          <div class="m_item g_anim">
+            <div class="number_">
+              05
+            </div>
+            <div class="text_box">
+              <p>
+                وضع الخطط والبرامج والمبادرات لرعاية وتشجيع واستقطاب الكوادر المتخصصة في برامج البحث والتطوير
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="home-section structure_section bg_blue" id="structure">
+
+    <div class="bg_ abs">
+      <picture>
+        <source srcset="assets/images/bg_blue.webp" type="image/webp">
+        <source srcset="assets/images/bg_blue.png" type="image/png">
+        <img src="assets/images/bg_blue.png" loading="lazy" alt="">
+      </picture>
+    </div>
+    <div class="container">
+      <div class="section-small-title">
+        <h3>مجلس</h3>
+      </div>
+      <div class="section-title">
+        <h2 data-split-word>الهيكل التنظيمي</h2>
+      </div>
+
+      <div class="structur_wrap">
+
+        <div class="swiper-container ">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide st_item g_anim">
+              <a href="#" class="inner_">
+                <div class="img_box abs">
+                  <picture class="hover_">
+                    <source srcset="assets/images/structur_img_2.webp" type="image/webp">
+                    <source srcset="assets/images/structur_img_2.jpg" type="image/jpg">
+                    <img src="assets/images/structur_img_2.jpg" loading="lazy" alt="">
+                  </picture>
+                  <picture class="main_img">
+                    <source srcset="assets/images/structur_img_1.webp" type="image/webp">
+                    <source srcset="assets/images/structur_img_1.jpg" type="image/jpg">
+                    <img src="assets/images/structur_img_1.jpg" loading="lazy" alt="">
+                  </picture>
+                </div>
+                <div class="title_">
+                  لجنة سياسات البحث والتطوير
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide st_item g_anim">
+              <a href="#" class="inner_">
+                <div class="img_box abs">
+                  <picture class="hover_">
+                    <source srcset="assets/images/structur_img_3.webp" type="image/webp">
+                    <source srcset="assets/images/structur_img_3.jpg" type="image/jpg">
+                    <img src="assets/images/structur_img_3.jpg" loading="lazy" alt="">
+                  </picture>
+                  <picture class="main_img">
+                    <source srcset="assets/images/structur_img_2.webp" type="image/webp">
+                    <source srcset="assets/images/structur_img_2.jpg" type="image/jpg">
+                    <img src="assets/images/structur_img_2.jpg" loading="lazy" alt="">
+                  </picture>
+                </div>
+                <div class="title_">
+                  لجنة قياس البحث والتطوير
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide st_item g_anim">
+              <a href="#" class="inner_">
+                <div class="img_box abs">
+                  <picture class="hover_">
+                    <source srcset="assets/images/structur_img_1.webp" type="image/webp">
+                    <source srcset="assets/images/structur_img_1.jpg" type="image/jpg">
+                    <img src="assets/images/structur_img_1.jpg" loading="lazy" alt="">
+                  </picture>
+                  <picture class="main_img">
+                    <source srcset="assets/images/structur_img_3.webp" type="image/webp">
+                    <source srcset="assets/images/structur_img_3.jpg" type="image/jpg">
+                    <img src="assets/images/structur_img_3.jpg" loading="lazy" alt="">
+                  </picture>
+                </div>
+                <div class="title_">
+                  لجنة تسويق البحث والتطوير
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide st_item g_anim">
+              <a href="#" class="inner_">
+                <div class="img_box abs">
+                  <picture class="hover_">
+                    <source srcset="assets/images/structur_img_2.webp" type="image/webp">
+                    <source srcset="assets/images/structur_img_2.jpg" type="image/jpg">
+                    <img src="assets/images/structur_img_2.jpg" loading="lazy" alt="">
+                  </picture>
+                  <picture class="main_img">
+                    <source srcset="assets/images/structur_img_1.webp" type="image/webp">
+                    <source srcset="assets/images/structur_img_1.jpg" type="image/jpg">
+                    <img src="assets/images/structur_img_1.jpg" loading="lazy" alt="">
+                  </picture>
+                </div>
+                <div class="title_">
+                  لجنة سياسات البحث والتطوير
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide st_item g_anim">
+              <a href="#" class="inner_">
+                <div class="img_box abs">
+                  <picture class="hover_">
+                    <source srcset="assets/images/structur_img_3.webp" type="image/webp">
+                    <source srcset="assets/images/structur_img_3.jpg" type="image/jpg">
+                    <img src="assets/images/structur_img_3.jpg" loading="lazy" alt="">
+                  </picture>
+                  <picture class="main_img">
+                    <source srcset="assets/images/structur_img_2.webp" type="image/webp">
+                    <source srcset="assets/images/structur_img_2.jpg" type="image/jpg">
+                    <img src="assets/images/structur_img_2.jpg" loading="lazy" alt="">
+                  </picture>
+                </div>
+                <div class="title_">
+                  لجنة قياس البحث والتطوير
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide st_item g_anim">
+              <a href="#" class="inner_">
+                <div class="img_box abs">
+                  <picture class="hover_">
+                    <source srcset="assets/images/structur_img_1.webp" type="image/webp">
+                    <source srcset="assets/images/structur_img_1.jpg" type="image/jpg">
+                    <img src="assets/images/structur_img_1.jpg" loading="lazy" alt="">
+                  </picture>
+                  <picture class="main_img">
+                    <source srcset="assets/images/structur_img_3.webp" type="image/webp">
+                    <source srcset="assets/images/structur_img_3.jpg" type="image/jpg">
+                    <img src="assets/images/structur_img_3.jpg" loading="lazy" alt="">
+                  </picture>
+                </div>
+                <div class="title_">
+                  لجنة تسويق البحث والتطوير
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav_box f_in_b f_d_2">
+          <div class="nav_ left_">
+            <svg viewBox="0 0 38.244 30.572">
+              <path
+                d="M0,15.188a3.549,3.549,0,0,0,.339-.267q7.3-7.3,14.6-14.6c.105-.105.2-.223.285-.321l2.613,2.665L7.3,13.2l.06.117c.1.01.2.028.3.028q15.16,0,30.321,0c.086,0,.173-.015.259-.024V17.2c-.148-.008-.3-.024-.445-.024H7.33L17.949,27.8l-2.783,2.775a1.422,1.422,0,0,0-.2-.335Q7.656,22.917.338,15.607A3.735,3.735,0,0,0,0,15.337Z"
+                fill="#fff" />
+            </svg>
+          </div>
+          <div class="nav_ right_">
+            <svg viewBox="0 0 38.244 30.572">
+              <path
+                d="M38.244,15.188a3.549,3.549,0,0,1-.339-.267q-7.3-7.3-14.6-14.6C23.2.215,23.1.1,23.018,0L20.4,2.665,30.939,13.2l-.06.117c-.1.01-.2.028-.3.028q-15.16,0-30.321,0c-.086,0-.173-.015-.259-.024V17.2c.148-.008.3-.024.445-.024H30.913L20.295,27.8l2.783,2.775a1.422,1.422,0,0,1,.2-.335q7.308-7.319,14.626-14.629a3.736,3.736,0,0,1,.338-.27Z"
+                fill="#fff" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="home-section members_section " id="members">
+    <div class="container">
+      <div class="title_tool_wrap">
+        <div class="t_">
+          <div class="section-small-title">
+            <h3>مجلس</h3>
+          </div>
+          <div class="section-title">
+            <h2>أعضاء</h2>
+          </div>
+        </div>
+
+        <div class="tool_wrap">
+          <div class="t_item">
+            <a href="#" class="link_ active">
+              <span>الحكومي</span>
+            </a>
+          </div>
+          <div class="t_item">
+            <a href="#" class="link_ ">
+              <span>المؤسسات الأكاديمية والبحثية</span>
+            </a>
+          </div>
+          <div class="t_item">
+            <a href="#" class="link_ ">
+              <span>صناعة</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="members_wrap">
+        <div class="lg_main">
+          <div class="mb_item">
+            <div class="inner_">
+              <div class="img_box abs">
+                <picture>
+                  <source srcset="assets/images/member_img_1.webp" type="image/webp">
+                  <source srcset="assets/images/member_img_1.jpg" type="image/jpg">
+                  <img src="assets/images/member_img_1.jpg" loading="lazy" alt="">
+                </picture>
+                <div class="tag_">
+                  <span>رئيس المجلس</span>
+                </div>
+              </div>
+              <div class="content_box">
+                <div class="title_">حيث هيغنس شيخ عبدلله بين زايد أل نهيان</div>
+                <div class="dec_">وزير الخارجية والتعاون الدولي</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="s_wrap">
+          <div class="swiper-container ">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide mb_item g_anim">
+                <div class="inner_">
+                  <div class="img_box abs">
+                    <picture>
+                      <source srcset="assets/images/member_img_2.webp" type="image/webp">
+                      <source srcset="assets/images/member_img_2.jpg" type="image/jpg">
+                      <img src="assets/images/member_img_2.jpg" loading="lazy" alt="">
+                    </picture>
+                  </div>
+                  <div class="content_box">
+                    <div class="title_">ه.إ. عبدالرحمن أل عويس</div>
+                    <div class="dec_">وزير الصحة ووقاية المجتمع</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide mb_item g_anim">
+                <div class="inner_">
+                  <div class="img_box abs">
+                    <picture>
+                      <source srcset="assets/images/member_img_3.webp" type="image/webp">
+                      <source srcset="assets/images/member_img_3.jpg" type="image/jpg">
+                      <img src="assets/images/member_img_3.jpg" loading="lazy" alt="">
+                    </picture>
+                  </div>
+                  <div class="content_box">
+                    <div class="title_">ه.إ. در. سلطان أل جابر</div>
+                    <div class="dec_">وزير الصناعة والتكنولوجيا المتقدمة</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide mb_item g_anim">
+                <div class="inner_">
+                  <div class="img_box abs">
+                    <picture>
+                      <source srcset="assets/images/member_img_4.webp" type="image/webp">
+                      <source srcset="assets/images/member_img_4.jpg" type="image/jpg">
+                      <img src="assets/images/member_img_4.jpg" loading="lazy" alt="">
+                    </picture>
+                  </div>
+                  <div class="content_box">
+                    <div class="title_">ه.إ. حسين أل حمدي</div>
+                    <div class="dec_">وزير التربية</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide mb_item g_anim">
+                <div class="inner_">
+                  <div class="img_box abs">
+                    <picture>
+                      <source srcset="assets/images/member_img_2.webp" type="image/webp">
+                      <source srcset="assets/images/member_img_2.jpg" type="image/jpg">
+                      <img src="assets/images/member_img_2.jpg" loading="lazy" alt="">
+                    </picture>
+                  </div>
+                  <div class="content_box">
+                    <div class="title_">ه.إ. عبدالرحمن أل عويس</div>
+                    <div class="dec_">وزير الصحة ووقاية المجتمع</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide mb_item g_anim">
+                <div class="inner_">
+                  <div class="img_box abs">
+                    <picture>
+                      <source srcset="assets/images/member_img_3.webp" type="image/webp">
+                      <source srcset="assets/images/member_img_3.jpg" type="image/jpg">
+                      <img src="assets/images/member_img_3.jpg" loading="lazy" alt="">
+                    </picture>
+                  </div>
+                  <div class="content_box">
+                    <div class="title_">ه.إ. در. سلطان أل جابر</div>
+                    <div class="dec_">وزير الصناعة والتكنولوجيا المتقدمة</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide mb_item g_anim">
+                <div class="inner_">
+                  <div class="img_box abs">
+                    <picture>
+                      <source srcset="assets/images/member_img_4.webp" type="image/webp">
+                      <source srcset="assets/images/member_img_4.jpg" type="image/jpg">
+                      <img src="assets/images/member_img_4.jpg" loading="lazy" alt="">
+                    </picture>
+                  </div>
+                  <div class="content_box">
+                    <div class="title_">ه.إ. حسين أل حمدي</div>
+                    <div class="dec_">وزير التربية</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="more_wrap flex_al f_in_b f_d_2">
+            <a href="members_ar.html" class="more h_black">
+              <i>مشاهدة الكل</i>
+              <span>مشاهدة الكل</span>
+            </a>
+            <div class="nav_box">
+              <div class="nav_ left_">
+                <svg viewBox="0 0 38.244 30.572">
+                  <path
+                    d="M0,15.188a3.549,3.549,0,0,0,.339-.267q7.3-7.3,14.6-14.6c.105-.105.2-.223.285-.321l2.613,2.665L7.3,13.2l.06.117c.1.01.2.028.3.028q15.16,0,30.321,0c.086,0,.173-.015.259-.024V17.2c-.148-.008-.3-.024-.445-.024H7.33L17.949,27.8l-2.783,2.775a1.422,1.422,0,0,0-.2-.335Q7.656,22.917.338,15.607A3.735,3.735,0,0,0,0,15.337Z"
+                    fill="#033053" />
+                </svg>
+              </div>
+              <div class="nav_ right_">
+                <svg viewBox="0 0 38.244 30.572">
+                  <path
+                    d="M38.244,15.188a3.549,3.549,0,0,1-.339-.267q-7.3-7.3-14.6-14.6C23.2.215,23.1.1,23.018,0L20.4,2.665,30.939,13.2l-.06.117c-.1.01-.2.028-.3.028q-15.16,0-30.321,0c-.086,0-.173-.015-.259-.024V17.2c.148-.008.3-.024.445-.024H30.913L20.295,27.8l2.783,2.775a1.422,1.422,0,0,1,.2-.335q7.308-7.319,14.626-14.629a3.736,3.736,0,0,1,.338-.27Z"
+                    fill="#033053" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="home-section updates_section no_padd_top no_padd_bottom" id="updates">
+    <div class="container-fluid">
+      <div class="section-small-title">
+        <h3>مجلس</h3>
+      </div>
+      <div class="section-title">
+        <h2>آخر التحديثات</h2>
+      </div>
+      <div class="updates_wrap">
+        <div class="swiper-container ">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide up_item lg_ g_anim">
+              <a href="news_details_ar.html" class="inner_">
+                <div class="img_box abs">
+                  <picture>
+                    <source srcset="assets/images/updates_img_1.webp" type="image/webp">
+                    <source srcset="assets/images/updates_img_1.jpg" type="image/jpg">
+                    <img src="assets/images/updates_img_1.jpg" loading="lazy" alt="">
+                  </picture>
+                  <div class="tag_">
+                    أخبار
+                  </div>
+                </div>
+                <div class="content_box">
+                  <div class="date_">20 NOV 2021</div>
+                  <div class="title_">
+                    الألم نفسه هو الحب ، نظام التخزين الرئيسي. فوسسي يترتب ليبيرو ...
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide up_item md_ g_anim">
+              <a href="#" class="inner_">
+                <div class="img_box abs">
+                  <picture>
+                    <source srcset="assets/images/updates_img_2.webp" type="image/webp">
+                    <source srcset="assets/images/updates_img_2.jpg" type="image/jpg">
+                    <img src="assets/images/updates_img_2.jpg" loading="lazy" alt="">
+                  </picture>
+
+
+                  <div class="icon_box">
+                    <svg viewBox="0 0 119 119">
+                      <g transform="translate(-1161 -7326)">
+                        <g class="circle_anim">
+                          <g transform="translate(1161 7326)" fill="none" stroke="#fff" stroke-width="2"
+                            stroke-dasharray="5">
+                            <circle cx="59.5" cy="59.5" r="59.5" stroke="none" />
+                            <circle cx="59.5" cy="59.5" r="58.5" fill="none" />
+                          </g>
+                        </g>
+                        <path d="M13,0,26,22H0Z" transform="translate(1234 7373) rotate(90)" fill="#fff" />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+
+              </a>
+            </div>
+            <div class="swiper-slide up_item md_ g_anim">
+              <a href="#" class="inner_">
+                <div class="img_box abs">
+                  <picture>
+                    <source srcset="assets/images/updates_img_3.webp" type="image/webp">
+                    <source srcset="assets/images/updates_img_3.jpg" type="image/jpg">
+                    <img src="assets/images/updates_img_3.jpg" loading="lazy" alt="">
+                  </picture>
+
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide up_item lg_ g_anim">
+              <a href="news_details_ar.html" class="inner_">
+                <div class="img_box abs">
+                  <picture>
+                    <source srcset="assets/images/updates_img_1.webp" type="image/webp">
+                    <source srcset="assets/images/updates_img_1.jpg" type="image/jpg">
+                    <img src="assets/images/updates_img_1.jpg" loading="lazy" alt="">
+                  </picture>
+                  <div class="tag_">
+                    أخبار
+                  </div>
+                </div>
+                <div class="content_box">
+                  <div class="date_">20 NOV 2021</div>
+                  <div class="title_">
+                    الألم نفسه هو الحب ، نظام التخزين الرئيسي. فوسسي يترتب ليبيرو ...
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide up_item md_ g_anim">
+              <a href="#" class="inner_">
+                <div class="img_box abs">
+                  <picture>
+                    <source srcset="assets/images/updates_img_2.webp" type="image/webp">
+                    <source srcset="assets/images/updates_img_2.jpg" type="image/jpg">
+                    <img src="assets/images/updates_img_2.jpg" loading="lazy" alt="">
+                  </picture>
+
+                  <div class="icon_box">
+                    <svg viewBox="0 0 119 119">
+                      <g transform="translate(-1161 -7326)">
+                        <g transform="translate(1161 7326)" fill="none" stroke="#fff" stroke-width="2"
+                          stroke-dasharray="5">
+                          <circle cx="59.5" cy="59.5" r="59.5" stroke="none" />
+                          <circle cx="59.5" cy="59.5" r="58.5" fill="none" />
+                        </g>
+                        <path d="M13,0,26,22H0Z" transform="translate(1234 7373) rotate(90)" fill="#fff" />
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+
+              </a>
+            </div>
+            <div class="swiper-slide up_item md_ g_anim">
+              <a href="#" class="inner_">
+                <div class="img_box abs">
+                  <picture>
+                    <source srcset="assets/images/updates_img_3.webp" type="image/webp">
+                    <source srcset="assets/images/updates_img_3.jpg" type="image/jpg">
+                    <img src="assets/images/updates_img_3.jpg" loading="lazy" alt="">
+                  </picture>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="more_wrap flex_al f_in_b f_d_2">
+          <a href="updates_ar.html" class="more h_black">
+            <i>مشاهدة الكل</i>
+            <span>مشاهدة الكل</span>
+          </a>
+          <div class="nav_box">
+            <div class="nav_ left_">
+              <svg viewBox="0 0 38.244 30.572">
+                <path
+                  d="M0,15.188a3.549,3.549,0,0,0,.339-.267q7.3-7.3,14.6-14.6c.105-.105.2-.223.285-.321l2.613,2.665L7.3,13.2l.06.117c.1.01.2.028.3.028q15.16,0,30.321,0c.086,0,.173-.015.259-.024V17.2c-.148-.008-.3-.024-.445-.024H7.33L17.949,27.8l-2.783,2.775a1.422,1.422,0,0,0-.2-.335Q7.656,22.917.338,15.607A3.735,3.735,0,0,0,0,15.337Z"
+                  fill="#033053" />
+              </svg>
+            </div>
+            <div class="nav_ right_">
+              <svg viewBox="0 0 38.244 30.572">
+                <path
+                  d="M38.244,15.188a3.549,3.549,0,0,1-.339-.267q-7.3-7.3-14.6-14.6C23.2.215,23.1.1,23.018,0L20.4,2.665,30.939,13.2l-.06.117c-.1.01-.2.028-.3.028q-15.16,0-30.321,0c-.086,0-.173-.015-.259-.024V17.2c.148-.008.3-.024.445-.024H30.913L20.295,27.8l2.783,2.775a1.422,1.422,0,0,1,.2-.335q7.308-7.319,14.626-14.629a3.736,3.736,0,0,1,.338-.27Z"
+                  fill="#033053" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="svg_shape_bottom">
+        <svg data-dash data-top data-left data-color="#B68A35"></svg>
+      </div>
+    </div>
+  </section>
+  <section class="home-section initiatives_section bg_blue no_padd_bottom" id="initiatives">
+    <div class="bg_ abs limited_h">
+      <picture>
+        <source srcset="assets/images/bg_blue.webp" type="image/webp">
+        <source srcset="assets/images/bg_blue.png" type="image/png">
+        <img src="assets/images/bg_blue.png" loading="lazy" alt="">
+      </picture>
+    </div>
+    <div class="svg_shape_top_right">
+      <svg data-dash data-bottom data-left data-color="#B68A35"></svg>
+    </div>
+    <div class="container-fluid">
+      <div class="section-small-title">
+        <h3>مجلس</h3>
+      </div>
+      <div class="section-title">
+        <h2>المبادرات</h2>
+      </div>
+
+      <div class="initiatives_wrap">
+        <div class="swiper-container ">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide in_item g_anim">
+              <a href="initiative_details_ar.html" class="inner_">
+                <div class="img_box abs">
+                  <picture class="hover_">
+                    <source srcset="assets/images/initiatives_img_2.webp" type="image/webp">
+                    <source srcset="assets/images/initiatives_img_2.jpg" type="image/jpg">
+                    <img src="assets/images/initiatives_img_2.jpg" loading="lazy" alt="">
+                  </picture>
+                  <picture class="main_img">
+                    <source srcset="assets/images/initiatives_img_1.webp" type="image/webp">
+                    <source srcset="assets/images/initiatives_img_1.jpg" type="image/jpg">
+                    <img src="assets/images/initiatives_img_1.jpg" loading="lazy" alt="">
+                  </picture>
+                  <div class="number">
+                    01
+                  </div>
+                </div>
+                <div class="title_">
+                  مبادرة 01
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide in_item g_anim">
+              <a href="initiative_details_ar.html" class="inner_">
+                <div class="img_box abs">
+                  <picture class="hover_">
+                    <source srcset="assets/images/initiatives_img_3.webp" type="image/webp">
+                    <source srcset="assets/images/initiatives_img_3.jpg" type="image/jpg">
+                    <img src="assets/images/initiatives_img_3.jpg" loading="lazy" alt="">
+                  </picture>
+                  <picture class="main_img">
+                    <source srcset="assets/images/initiatives_img_2.webp" type="image/webp">
+                    <source srcset="assets/images/initiatives_img_2.jpg" type="image/jpg">
+                    <img src="assets/images/initiatives_img_2.jpg" loading="lazy" alt="">
+                  </picture>
+                  <div class="number">
+                    02
+                  </div>
+                </div>
+                <div class="title_">
+                  مبادرة 02
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide in_item g_anim">
+              <a href="initiative_details_ar.html" class="inner_">
+                <div class="img_box abs">
+                  <picture class="hover_">
+                    <source srcset="assets/images/initiatives_img_1.webp" type="image/webp">
+                    <source srcset="assets/images/initiatives_img_1.jpg" type="image/jpg">
+                    <img src="assets/images/initiatives_img_1.jpg" loading="lazy" alt="">
+                  </picture>
+                  <picture class="main_img">
+                    <source srcset="assets/images/initiatives_img_3.webp" type="image/webp">
+                    <source srcset="assets/images/initiatives_img_3.jpg" type="image/jpg">
+                    <img src="assets/images/initiatives_img_3.jpg" loading="lazy" alt="">
+                  </picture>
+                  <div class="number">
+                    03
+                  </div>
+                </div>
+                <div class="title_">
+                  مبادرة 03
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="more_wrap flex_al f_in_b f_d_2">
+          <a href="initiatives_ar.html" class="more ">
+            <i>مشاهدة الكل</i>
+            <span>مشاهدة الكل</span>
+          </a>
+          <div class="nav_box">
+            <div class="nav_ left_">
+              <svg viewBox="0 0 38.244 30.572">
+                <path
+                  d="M0,15.188a3.549,3.549,0,0,0,.339-.267q7.3-7.3,14.6-14.6c.105-.105.2-.223.285-.321l2.613,2.665L7.3,13.2l.06.117c.1.01.2.028.3.028q15.16,0,30.321,0c.086,0,.173-.015.259-.024V17.2c-.148-.008-.3-.024-.445-.024H7.33L17.949,27.8l-2.783,2.775a1.422,1.422,0,0,0-.2-.335Q7.656,22.917.338,15.607A3.735,3.735,0,0,0,0,15.337Z"
+                  fill="#FFF" />
+              </svg>
+            </div>
+            <div class="nav_ right_">
+              <svg viewBox="0 0 38.244 30.572">
+                <path
+                  d="M38.244,15.188a3.549,3.549,0,0,1-.339-.267q-7.3-7.3-14.6-14.6C23.2.215,23.1.1,23.018,0L20.4,2.665,30.939,13.2l-.06.117c-.1.01-.2.028-.3.028q-15.16,0-30.321,0c-.086,0-.173-.015-.259-.024V17.2c.148-.008.3-.024.445-.024H30.913L20.295,27.8l2.783,2.775a1.422,1.422,0,0,1,.2-.335q7.308-7.319,14.626-14.629a3.736,3.736,0,0,1,.338-.27Z"
+                  fill="#FFF" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container idea_container" id="submit_idea">
+      <div class="section-small-title">
+        <h3>إرسال</h3>
+      </div>
+      <div class="section-title">
+        <h2>افكارك</h2>
+      </div>
+
+      <div class="idea_wrap">
+        <div class="img_box">
+          <div class="bg_span">
+            <span class="bg_h">
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+            </span>
+          </div>
+          <div class="bg_span v_2">
+            <span class="bg_h">
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+            </span>
+          </div>
+          <svg viewBox="0 0 213.619 290.321">
+            <g transform="translate(3.5 3.5)" style="isolation:isolate">
+              <path
+                d="M-644.435,763.451a103.342,103.342,0,0,1-64.081-95.6,103.309,103.309,0,0,1,103.31-103.309A103.309,103.309,0,0,1-501.9,667.85c0,42.792-26.8,80.406-63.881,96.089l-78.858,29.33"
+                transform="translate(708.516 -564.541)" fill="none" stroke="#b68a35" stroke-miterlimit="10"
+                stroke-width="7" />
+              <line x1="83.701" y2="31.131" transform="translate(63.88 222.744)" fill="none" stroke="#b68a35"
+                stroke-miterlimit="10" stroke-width="7" stroke-dasharray="5" />
+              <path
+                d="M-553.339,781.866A48.569,48.569,0,0,1-548,768a48.865,48.865,0,0,1,42.43-24.592,49.493,49.493,0,0,1,5.693.327,58.743,58.743,0,0,1,.859,10.036,58.391,58.391,0,0,1-58.391,58.391,58.414,58.414,0,0,1-54.979-38.678h0c11.488-4.949,25.166-3.538,35.97,2.766,20.042,11.7,25.755,35.526,25.767,59.127v7.968"
+                transform="translate(656.986 -660.426)" fill="none" stroke="#b68a35" stroke-miterlimit="10"
+                stroke-width="7" />
+              <g transform="translate(619.312 -853.956)" fill="none" stroke-miterlimit="10">
+                <path d="M-487.9,1112.279a28.5,28.5,0,0,1-28.5,28.5,28.5,28.5,0,0,1-25.712-16.192l54.21-20.157Z"
+                  stroke="none" />
+                <path
+                  d="M -495.0184936523438 1114.543090820313 L -531.0896606445313 1127.955444335938 C -527.1612548828125 1131.61767578125 -521.9171142578125 1133.776611328125 -516.398193359375 1133.776611328125 C -505.308837890625 1133.776611328125 -496.1536254882813 1125.336547851563 -495.0184936523438 1114.543090820313 M -487.9000854492188 1104.427978515625 L -487.9000854492188 1112.278686523438 C -487.9000854492188 1128.017700195313 -500.6592407226563 1140.776611328125 -516.398193359375 1140.776611328125 C -527.7304077148438 1140.776611328125 -537.517578125 1134.162963867188 -542.1099853515625 1124.5849609375 L -487.9000854492188 1104.427978515625 Z"
+                  stroke="none" fill="#b68a35" />
+              </g>
+              <path d="M-610.216,934.453l8.08,27.1-27.1,8.08" transform="translate(666.016 -762.838)" fill="none"
+                stroke="#b68a35" stroke-miterlimit="10" stroke-width="7" />
+            </g>
+          </svg>
+        </div>
+
+        <div class="form_wrap form-v3">
+          <form>
+            <div class="input_box">
+              <div class="input-field ">
+                <input id="u_name" type="text">
+                <label for="u_name">اسم</label>
+              </div>
+              <div class="input-field ">
+                <input id="u_phone" type="text">
+                <label for="u_phone">رقم التليفون</label>
+              </div>
+              <div class="input-field ">
+                <input id="u_email" type="email">
+                <label for="u_email">عنوان الايميل</label>
+              </div>
+              <div class="input-field ">
+                <input id="u_subject" type="text">
+                <label for="u_subject">موضوع</label>
+              </div>
+              <div class="input-field full_">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">وصف</label>
+              </div>
+              <div class="input-field full_">
+                <button style="submit" class="more h_black">
+                  <i>إرسال</i>
+                  <span>إرسال</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width=0 height=0>
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+      <feBlend in="SourceGraphic" in2="goo" />
+    </filter>
+  </defs>
+</svg>
+<script src="assets/scripts/lib/modernizr.min.js"></script>
+<script src="assets/scripts/lib/jquery-3.4.1.min.js"></script>
+<script src="assets/scripts/lib/jquery-migrate-3.0.1.min.js"></script>
+<script src="assets/scripts/min/home_plugins.js"></script>
+<script src="assets/scripts/min/home.js"></script>
+
+<script>
+
+
+    
+</script><footer>
+  <div class="container">
+
+    <div class="social_wrap_box">
+      <ul>
+        <li>
+          <a href="#" class="link_">
+            <svg viewBox="0 0 23.333 18.958">
+              <path
+                d="M23.333,66.244A9.974,9.974,0,0,1,20.577,67a4.757,4.757,0,0,0,2.1-2.644,9.56,9.56,0,0,1-3.033,1.158,4.783,4.783,0,0,0-8.275,3.271,4.926,4.926,0,0,0,.111,1.091,13.54,13.54,0,0,1-9.86-5,4.785,4.785,0,0,0,1.47,6.393,4.724,4.724,0,0,1-2.161-.589v.053a4.806,4.806,0,0,0,3.832,4.7,4.775,4.775,0,0,1-1.254.157,4.229,4.229,0,0,1-.906-.082,4.829,4.829,0,0,0,4.47,3.332,9.612,9.612,0,0,1-5.931,2.04A8.959,8.959,0,0,1,0,80.812a13.467,13.467,0,0,0,7.338,2.147A13.521,13.521,0,0,0,20.953,69.346c0-.211-.007-.416-.018-.618A9.543,9.543,0,0,0,23.333,66.244Z"
+                transform="translate(0 -64)" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="link_">
+            <svg viewBox="0 0 20.443 20.02">
+              <g transform="translate(0 -0.389)">
+                <rect width="4.572" height="14.054" transform="translate(0 6.353)" />
+                <path
+                  d="M170.635,160.165c-.049-.015-.095-.032-.146-.046s-.123-.026-.185-.036a4.1,4.1,0,0,0-.82-.083h0a6.352,6.352,0,0,0-4.913,2.687V160H160v14.054h4.572v-7.666s3.455-4.812,4.913-1.278v8.944h4.57V164.57A4.558,4.558,0,0,0,170.635,160.165Z"
+                  transform="translate(-153.612 -153.647)" />
+                <circle cx="2" cy="2" r="2" transform="translate(0 0.389)" />
+              </g>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="link_">
+            <svg viewBox="0 0 20.443 20.442">
+              <path
+                d="M14.054,0H6.388A6.389,6.389,0,0,0,0,6.388v7.666a6.389,6.389,0,0,0,6.388,6.388h7.666a6.389,6.389,0,0,0,6.388-6.388V6.388A6.389,6.389,0,0,0,14.054,0Zm4.472,14.054a4.477,4.477,0,0,1-4.472,4.472H6.388a4.477,4.477,0,0,1-4.472-4.472V6.388A4.477,4.477,0,0,1,6.388,1.917h7.666a4.477,4.477,0,0,1,4.472,4.472Z" />
+              <path
+                d="M133.111,128a5.111,5.111,0,1,0,5.111,5.111A5.111,5.111,0,0,0,133.111,128Zm0,8.3a3.194,3.194,0,1,1,3.194-3.194A3.2,3.2,0,0,1,133.111,136.3Z"
+                transform="translate(-122.889 -122.889)" />
+              <ellipse cx="0.681" cy="0.681" rx="0.681" ry="0.681" transform="translate(15.034 4.046)" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="inner center">
+      <p>حقوق الطبع والنشر © 2021 جميع الحقوق محفوظة. وزارة الصناعة والتكنولوجيا المتقدمة</p>
+    </div>
+  </div>
+  <div class="progress-wrap">
+    <div class="icon_">
+      <svg x="0px" y="0px" viewBox="0 0 21.8 28" overflow="visible" xml:space="preserve">
+        <line fill="none" stroke="#033053" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+          x1="10.9" y1="24.8" x2="10.9" y2="3.7" />
+        <polyline fill="none" stroke="#033053" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+          points="2.7,11.6 
+	10.9,3.3 19.2,11.6 " />
+      </svg>
+    </div>
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+    </svg>
+  </div>
+</footer></body>
+
+</html>
