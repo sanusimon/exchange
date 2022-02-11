@@ -670,3 +670,39 @@ video::-webkit-media-controls-volume-slider {
     }
   }
 }
+
+.keep_know{
+  .kn_img{
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    .img_wrap{
+      position: relative;
+      padding-top: 50%;
+      img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .inner_{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    .lf_{
+      // width: 50%;
+      margin-inline-start: 17.5%;
+      h2{
+        font-size: 4.2vw;
+        font-weight: 900;
+        color: #0096A7;
+      }
+    }
+  }
+}
