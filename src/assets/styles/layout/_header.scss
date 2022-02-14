@@ -28,7 +28,7 @@ header {
     
     // opacity: 0;
 
-    @media only screen and(max-width:1024px){
+    @media only screen and(max-width:1023px){
       position: fixed;
       left: 0;
       top: 0;
@@ -62,7 +62,7 @@ header {
       // width: 65vw;
       margin: 0 auto;
       // padding-top: 10vh;
-      @media only screen and (max-width: 1024px) {
+      @media only screen and (max-width: 1023px) {
         width: 75vw;
       }
       // @media only screen and (max-width: 767px) {
@@ -73,13 +73,13 @@ header {
       padding: 0;
       margin: 0;
       list-style: none;
-      @media only screen and (min-width: 1025px) {
+      @media only screen and (min-width: 1024px) {
         display: flex;
         align-items: center;
         justify-content: center;
         grid-gap: 1.5em;
       }
-      @media only screen and (max-width: 1024px) {
+      @media only screen and (max-width: 1023px) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 2rem;
@@ -96,16 +96,16 @@ header {
         align-items: center;
         opacity: 0;
         transition: all 0.3s ease-in-out;
-        @media only screen and(min-width:1025px){
+        @media only screen and(min-width:1024px){
           opacity: 1;
         }
         &:nth-child(odd) {
-          @media only screen and(max-width:1024px){
+          @media only screen and(max-width:1023px){
             transform: translateX(-3rem);
           }
         }
         &:nth-child(even) {
-          @media only screen and(max-width:1024px){
+          @media only screen and(max-width:1023px){
             transform: translateX(3rem);
           }
         }
@@ -133,7 +133,7 @@ header {
     padding: 0.5rem 0;
     max-width: calc(90% - 30px);
     margin: 0 auto;
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 1023px) {
       display: grid;
       grid-template-columns: 40vw 1fr;
       padding: 1rem 0;
@@ -192,7 +192,7 @@ header {
 
     &.right_ {
       text-align: right;
-      @media only screen and (max-width: 1024px) {
+      @media only screen and (max-width: 1023px) {
         position: absolute;
         left: calc(5vw + 15px);
         top: 0;
@@ -211,7 +211,7 @@ header {
     z-index: 10;
     flex: 1;
     display: none;
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 1023px) {
       display: block;
     }
     ul {
@@ -223,14 +223,14 @@ header {
       grid-gap: 0.9rem;
       z-index: 10;
       width: 100%;
-      @media only screen and (max-width: 1024px) {
+      @media only screen and (max-width: 1023px) {
         grid-template-columns: 1fr 35px;
       }
       li {
         height: auto;
         display: flex;
         align-items: center;
-        @media only screen and (max-width: 1024px) {
+        @media only screen and (max-width: 1023px) {
           &:not(.no_hide) {
             display: none;
           }
@@ -275,14 +275,14 @@ header {
     a{
       border: 1px solid $brand-color;
       color: $brand-color;
-      padding: 0.5em 1em;
+      padding: 0.3em 1em;
       font-weight: 700;
     }
   }
   .lang_ {
     width: 35px;
     height: 35px;
-    background-color: rgba($color-white, 0.36);
+    background-color: $brand-color;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -315,7 +315,7 @@ header {
     display: flex;
     position: relative;
     transition: all 0.3s ease-in-out;
-    @media only screen and(min-width:1025px){
+    @media only screen and(min-width:1024px){
       font-size:.9rem;
     }
     
@@ -380,36 +380,17 @@ header {
       }
     }
     .dote_ {
-      background: $color-white;
+      background: $brand-color;
       height: 6px;
       transition: all 0.3s ease-in-out;
     }
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   header {
-    .barnd_box {
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0.3s ease-in-out;
-      &.right_ {
-        opacity: 1;
-        pointer-events: auto;
-      }
-    }
-    &.logo_swap {
-      .barnd_box {
-        &.left_ {
-          opacity: 1;
-          pointer-events: auto;
-        }
-        &.right_ {
-          opacity: 0;
-          pointer-events: none;
-        }
-      }
-    }
+
+
   }
   html[dir="rtl"] {
     header {
@@ -425,12 +406,7 @@ header {
     .mn_link{
       color: $color-black;
     }
-    .lang_{
-      background: rgba(0,0,0,.3);
-    }
-    .menu_trigger .dote_{
-      background: $color-white;
-    }
+    
   }
   header .nav_box_wrapper {
     &.show {
@@ -467,12 +443,8 @@ header {
         color: $color-black;
       }
     }
-    .lang_{
-      background: rgba(0,0,0,.3);
-    }
-    .menu_trigger .dote_{
-      background: $color-black;
-    }
+   
+    
     .navbar {
       .barnd_box {
         .navbar-brand {

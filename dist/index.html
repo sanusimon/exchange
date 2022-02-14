@@ -19,37 +19,27 @@
             width: 100%;
             height: 100%;
             z-index: 99999999;
-            background: #033053;
+            background: #e2503f;
             margin: auto;
-            -webkit-transition: all 1s .1s ease-in-out;
-            -o-transition: all 1s .1s ease-in-out;
-            transition: all 1s .1s ease-in-out
+            -webkit-transition: width .5s ease-in-out, height .5s ease-in-out, opacity .3s .5s ease-in-out, visibility .3s .5s ease-in-out, clip-path 1s ease-in-out;
+            -o-transition: width .5s ease-in-out, height .5s ease-in-out, opacity .3s .5s ease-in-out, visibility .3s .5s ease-in-out , clip-path 1s ease-in-out;
+            transition: width .5s ease-in-out, height .5s ease-in-out, opacity .3s .5s ease-in-out, visibility .3s .5s ease-in-out , clip-path 1s ease-in-out;
+            /*clip-path: ellipse(100% 74% at 48% 44%);*/
         }
     
-        .loader .in_loader {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
+        .loader .loader-block {
+            width: 100%;
             height: 100%;
-            -webkit-transition: all 1s .1s ease-in-out;
-            -o-transition: all 1s .1s ease-in-out;
-            transition: all 1s .1s ease-in-out
-        }
-    
-        .is-loaded .loader {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            -webkit-transition: all .4s .1s ease-in-out;
+            -o-transition: all .4s .1s ease-in-out;
+            transition: all .4s .1s ease-in-out
         }
     
         .loader .loader-img {
-            margin: 0;
+            margin: 35px 0;
             text-align: center
         }
     
@@ -59,41 +49,32 @@
             height: auto
         }
     
-        @media only screen and (max-width: 767px) {
-            .loader .loader-img img {
-                max-width: 70vw;
-            }
-        }
-    
-        .is-loaded .loader .in_loader {
-            -webkit-transform: scale(.5) translateY(100%);
-            -ms-transform: scale(.5) translateY(100%);
-            transform: scale(.5) translateY(100%);
-            -webkit-transform-origin: center bottom;
-            -ms-transform-origin: center bottom;
-            transform-origin: center bottom;
-        }
-    
-        .pre_loaderSvg {
-            position: absolute;
-            left: 5vh;
-            top: 5vh;
-            width: calc(100% - 10vh);
-            height: calc(100% - 10vh);
-        }
-    
-        @media only screen and (max-width: 767px) {
-            .pre_loaderSvg {
-                position: absolute;
-                left: 15px;
-                top: 15px;
-                width: calc(100% - 30px);
-                height: calc(100% - 30px);
-            }
-        }
-    
         .is-loaded .loader {
-            pointer-events: none
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            /*clip-path: ellipse(100% 55% at 48% -55%); */
+        }
+    
+        .is-loaded .loader .loader-block {
+            opacity: 0;
+            -webkit-transform: translateY(2em) scale(.5);
+            -ms-transform: translateY(2em) scale(.5);
+            transform: translateY(2em) scale(.5)
+        }
+    
+        .loader .loader-img {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+    
+        .loader .loader-img img {
+            max-height: 90px;
+            margin: 0 10px;
         }
     </style></head>
 
@@ -125,7 +106,7 @@
                 </a>
               </li>
     
-               <li class="hdr_btn">
+               <li class="hdr_btn nav-item">
                 <a class="" href="#" title=""><span>GET INVOLVED</span></a>
               </li>
               
@@ -135,14 +116,33 @@
             </ul>
           </nav>
         </div>
+        <div class="hd_nav_box">
+          <ul>
+            <li class="no_hide">
+              <button class="menu_trigger" data-traget="master_menu">
+                <div class="box">
+                  <span class="dote_ t_"></span>
+                  <span class="dote_ m_"></span>
+                  <span class="dote_ b_"></span>
+                </div>
+                <div class="box p_">
+                  <span class="dote_ t_"></span>
+                  <span class="dote_ m_"></span>
+                  <span class="dote_ b_"></span>
+                </div>
+              </button>
+            </li>
+          </ul>
+        </div> 
+       
       </div>
     </header><div class="loader">
-    <div class="in_loader">
-        <div class="loader-block">
-            <div class="loader-img">
-                <img src="assets/images/logo.svg" alt="">
-            </div>
+    <div class="loader-block">
+        <div class="loader-img">
+            <img src="assets/images/white-logo.svg" alt="">
+
         </div>
+        <div class="linePreloader"></div>
     </div>
 </div><main>
   <section class="home-banner" id="home">
@@ -278,6 +278,24 @@ INSPIRED</h2>
                 <div class="text_box">
                   <p>Join collaborative discussions and hands-on workshops where you can share ideas for impact.</p>
                 </div>
+                <a class="cta_link" href="#">CTA link 
+                  <span class="svg_arow">
+                    <svg viewBox="0 0 36.713 19.129">
+                      <defs>
+                        <clipPath id="clip-path">
+                          <rect id="Rectangle_4" data-name="Rectangle 4" width="36.713" height="19.129" fill="none" stroke="#e2503f" stroke-linecap="square" stroke-width="1"/>
+                        </clipPath>
+                      </defs>
+                      <g id="Group_77" data-name="Group 77" transform="translate(0 0)">
+                        <g id="Group_54" data-name="Group 54" transform="translate(0 0)" clip-path="url(#clip-path)">
+                          <path id="Path_54" data-name="Path 54" d="M70.927.353l9.43,9.43-9.43,9.43" transform="translate(-43.914 -0.219)" fill="none" stroke="#e2503f" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                          <path id="Path_55" data-name="Path 55" d="M0,25.114H36.443" transform="translate(0 -15.549)" fill="none" stroke="#e2503f" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                        </g>
+                      </g>
+                    </svg>
+
+                  </span>
+                </a>
               </div>
           </div>
           <div class="half_ img_div">
@@ -333,7 +351,25 @@ INSPIRED</h2>
                 </div>
                 <div class="bx_btm">
                   <a href="#" class="rd_more">Read More</a>
-                  <a href="#" class="rgster" style="color: #FFD000;">Register</a>
+                  <a href="#" class="rgster" style="color: #FFD000;">
+                    Register 
+                    <span class="svg_arow">
+                      <svg viewBox="0 0 36.713 19.129">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectangle_4" data-name="Rectangle 4" width="36.713" height="19.129" fill="none" stroke="#FFD000" stroke-linecap="square" stroke-width="1"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Group_77" data-name="Group 77" transform="translate(0 0)">
+                          <g id="Group_54" data-name="Group 54" transform="translate(0 0)" clip-path="url(#clip-path)">
+                            <path id="Path_54" data-name="Path 54" d="M70.927.353l9.43,9.43-9.43,9.43" transform="translate(-43.914 -0.219)" fill="none" stroke="#FFD000" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                            <path id="Path_55" data-name="Path 55" d="M0,25.114H36.443" transform="translate(0 -15.549)" fill="none" stroke="#FFD000" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                          </g>
+                        </g>
+                      </svg>
+
+                    </span>
+                    </a>
                 </div>
               </div>
               <div class="box_" style="background: #3F1C8E;">
@@ -344,7 +380,24 @@ INSPIRED</h2>
                 </div>
                 <div class="bx_btm">
                   <a href="#" class="rd_more">Read More</a>
-                  <a href="#" class="rgster" style="color: #89D2D1;">Register</a>
+                  <a href="#" class="rgster" style="color: #89D2D1;">Register
+                    <span class="svg_arow">
+                      <svg viewBox="0 0 36.713 19.129">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectangle_4" data-name="Rectangle 4" width="36.713" height="19.129" fill="none" stroke="#89D2D1" stroke-linecap="square" stroke-width="1"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Group_77" data-name="Group 77" transform="translate(0 0)">
+                          <g id="Group_54" data-name="Group 54" transform="translate(0 0)" clip-path="url(#clip-path)">
+                            <path id="Path_54" data-name="Path 54" d="M70.927.353l9.43,9.43-9.43,9.43" transform="translate(-43.914 -0.219)" fill="none" stroke="#89D2D1" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                            <path id="Path_55" data-name="Path 55" d="M0,25.114H36.443" transform="translate(0 -15.549)" fill="none" stroke="#89D2D1" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                          </g>
+                        </g>
+                      </svg>
+
+                    </span>
+                  </a>
                 </div>
               </div>
               <div class="box_" style="background: #B7ADC6;">
@@ -355,7 +408,24 @@ INSPIRED</h2>
                 </div>
                 <div class="bx_btm">
                   <a href="#" class="rd_more">Read More</a>
-                  <a href="#" class="rgster" style="color: #00834B;">Register</a>
+                  <a href="#" class="rgster" style="color: #00834B;">Register
+                    <span class="svg_arow">
+                      <svg viewBox="0 0 36.713 19.129">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectangle_4" data-name="Rectangle 4" width="36.713" height="19.129" fill="none" stroke="#00834B" stroke-linecap="square" stroke-width="1"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Group_77" data-name="Group 77" transform="translate(0 0)">
+                          <g id="Group_54" data-name="Group 54" transform="translate(0 0)" clip-path="url(#clip-path)">
+                            <path id="Path_54" data-name="Path 54" d="M70.927.353l9.43,9.43-9.43,9.43" transform="translate(-43.914 -0.219)" fill="none" stroke="#00834B" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                            <path id="Path_55" data-name="Path 55" d="M0,25.114H36.443" transform="translate(0 -15.549)" fill="none" stroke="#00834B" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                          </g>
+                        </g>
+                      </svg>
+
+                    </span>
+                  </a>
                 </div>
               </div>
               <div class="box_" style="background: #E2503F;">
@@ -366,7 +436,24 @@ INSPIRED</h2>
                 </div>
                 <div class="bx_btm">
                   <a href="#" class="rd_more">Read More</a>
-                  <a href="#" class="rgster" style="color: #DEDC2A;">Register</a>
+                  <a href="#" class="rgster" style="color: #DEDC2A;">Register
+                    <span class="svg_arow">
+                      <svg viewBox="0 0 36.713 19.129">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectangle_4" data-name="Rectangle 4" width="36.713" height="19.129" fill="none" stroke="#DEDC2A" stroke-linecap="square" stroke-width="1"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Group_77" data-name="Group 77" transform="translate(0 0)">
+                          <g id="Group_54" data-name="Group 54" transform="translate(0 0)" clip-path="url(#clip-path)">
+                            <path id="Path_54" data-name="Path 54" d="M70.927.353l9.43,9.43-9.43,9.43" transform="translate(-43.914 -0.219)" fill="none" stroke="#DEDC2A" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                            <path id="Path_55" data-name="Path 55" d="M0,25.114H36.443" transform="translate(0 -15.549)" fill="none" stroke="#DEDC2A" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                          </g>
+                        </g>
+                      </svg>
+
+                    </span>
+                  </a>
                 </div>
               </div>
               <div class="box_" style="background: #74D896;">
@@ -377,7 +464,24 @@ INSPIRED</h2>
                 </div>
                 <div class="bx_btm">
                   <a href="#" class="rd_more">Read More</a>
-                  <a href="#" class="rgster" style="color: #00834B;">Register</a>
+                  <a href="#" class="rgster" style="color: #00834B;">Register
+                    <span class="svg_arow">
+                      <svg viewBox="0 0 36.713 19.129">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectangle_4" data-name="Rectangle 4" width="36.713" height="19.129" fill="none" stroke="#00834B" stroke-linecap="square" stroke-width="1"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Group_77" data-name="Group 77" transform="translate(0 0)">
+                          <g id="Group_54" data-name="Group 54" transform="translate(0 0)" clip-path="url(#clip-path)">
+                            <path id="Path_54" data-name="Path 54" d="M70.927.353l9.43,9.43-9.43,9.43" transform="translate(-43.914 -0.219)" fill="none" stroke="#00834B" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                            <path id="Path_55" data-name="Path 55" d="M0,25.114H36.443" transform="translate(0 -15.549)" fill="none" stroke="#00834B" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                          </g>
+                        </g>
+                      </svg>
+
+                    </span>
+                  </a>
                 </div>
               </div>
               <div class="box_" style="background: #FF7800;">
@@ -388,7 +492,24 @@ INSPIRED</h2>
                 </div>
                 <div class="bx_btm">
                   <a href="#" class="rd_more">Read More</a>
-                  <a href="#" class="rgster" style="color: #98E0D0;">Register</a>
+                  <a href="#" class="rgster" style="color: #98E0D0;">Register
+                    <span class="svg_arow">
+                      <svg viewBox="0 0 36.713 19.129">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectangle_4" data-name="Rectangle 4" width="36.713" height="19.129" fill="none" stroke="#98E0D0" stroke-linecap="square" stroke-width="1"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Group_77" data-name="Group 77" transform="translate(0 0)">
+                          <g id="Group_54" data-name="Group 54" transform="translate(0 0)" clip-path="url(#clip-path)">
+                            <path id="Path_54" data-name="Path 54" d="M70.927.353l9.43,9.43-9.43,9.43" transform="translate(-43.914 -0.219)" fill="none" stroke="#98E0D0" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                            <path id="Path_55" data-name="Path 55" d="M0,25.114H36.443" transform="translate(0 -15.549)" fill="none" stroke="#98E0D0" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                          </g>
+                        </g>
+                      </svg>
+
+                    </span>
+                  </a>
                 </div>
               </div>
               <div class="box_" style="background: #90BAC9;">
@@ -399,7 +520,24 @@ INSPIRED</h2>
                 </div>
                 <div class="bx_btm">
                   <a href="#" class="rd_more">Read More</a>
-                  <a href="#" class="rgster" style="color: #C6470A;">Register</a>
+                  <a href="#" class="rgster" style="color: #C6470A;">Register
+                    <span class="svg_arow">
+                      <svg viewBox="0 0 36.713 19.129">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectangle_4" data-name="Rectangle 4" width="36.713" height="19.129" fill="none" stroke="#C6470A" stroke-linecap="square" stroke-width="1"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Group_77" data-name="Group 77" transform="translate(0 0)">
+                          <g id="Group_54" data-name="Group 54" transform="translate(0 0)" clip-path="url(#clip-path)">
+                            <path id="Path_54" data-name="Path 54" d="M70.927.353l9.43,9.43-9.43,9.43" transform="translate(-43.914 -0.219)" fill="none" stroke="#C6470A" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                            <path id="Path_55" data-name="Path 55" d="M0,25.114H36.443" transform="translate(0 -15.549)" fill="none" stroke="#C6470A" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                          </g>
+                        </g>
+                      </svg>
+
+                    </span>
+                  </a>
                 </div>
               </div>
               <div class="box_" style="background: #541226;">
@@ -410,7 +548,24 @@ INSPIRED</h2>
                 </div>
                 <div class="bx_btm">
                   <a href="#" class="rd_more">Read More</a>
-                  <a href="#" class="rgster" style="color: #6E72BF;">Register</a>
+                  <a href="#" class="rgster" style="color: #6E72BF;">Register
+                    <span class="svg_arow">
+                      <svg viewBox="0 0 36.713 19.129">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectangle_4" data-name="Rectangle 4" width="36.713" height="19.129" fill="none" stroke="#6E72BF" stroke-linecap="square" stroke-width="1"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Group_77" data-name="Group 77" transform="translate(0 0)">
+                          <g id="Group_54" data-name="Group 54" transform="translate(0 0)" clip-path="url(#clip-path)">
+                            <path id="Path_54" data-name="Path 54" d="M70.927.353l9.43,9.43-9.43,9.43" transform="translate(-43.914 -0.219)" fill="none" stroke="#6E72BF" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                            <path id="Path_55" data-name="Path 55" d="M0,25.114H36.443" transform="translate(0 -15.549)" fill="none" stroke="#6E72BF" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                          </g>
+                        </g>
+                      </svg>
+
+                    </span>
+                  </a>
                 </div>
               </div>
               <div class="box_" style="background: #3F1C8E;">
@@ -421,7 +576,24 @@ INSPIRED</h2>
                 </div>
                 <div class="bx_btm">
                   <a href="#" class="rd_more">Read More</a>
-                  <a href="#" class="rgster" style="color: #89D2D1;">Register</a>
+                  <a href="#" class="rgster" style="color: #89D2D1;">Register
+                    <span class="svg_arow">
+                      <svg viewBox="0 0 36.713 19.129">
+                        <defs>
+                          <clipPath id="clip-path">
+                            <rect id="Rectangle_4" data-name="Rectangle 4" width="36.713" height="19.129" fill="none" stroke="#89D2D1" stroke-linecap="square" stroke-width="1"/>
+                          </clipPath>
+                        </defs>
+                        <g id="Group_77" data-name="Group 77" transform="translate(0 0)">
+                          <g id="Group_54" data-name="Group 54" transform="translate(0 0)" clip-path="url(#clip-path)">
+                            <path id="Path_54" data-name="Path 54" d="M70.927.353l9.43,9.43-9.43,9.43" transform="translate(-43.914 -0.219)" fill="none" stroke="#89D2D1" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                            <path id="Path_55" data-name="Path 55" d="M0,25.114H36.443" transform="translate(0 -15.549)" fill="none" stroke="#89D2D1" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+                          </g>
+                        </g>
+                      </svg>
+
+                    </span>
+                  </a>
                 </div>
               </div>
               <div class="box_ load_more" style="background: #fff;">
@@ -440,8 +612,8 @@ INSPIRED</h2>
         <div class="img_wrap">
           <picture>
             <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
-              <source srcset="assets/images/about-img.jpg" type="image/jpeg">
-              <img src="assets/images/about-img.jpg" loading="lazy" alt="">
+              <source srcset="assets/images/keep-img.jpg" type="image/jpeg">
+              <img src="assets/images/keep-img.jpg" loading="lazy" alt="">
             </picture>
           </div>
       </div>
@@ -452,12 +624,29 @@ INSPIRED</h2>
             <div class="text_box">
               <p>Subscribe to our newsletter to keep updated on all the lorem ipsum dolor audere est</p>
             </div>
+            <div class="subscrib_bx">
+              <div class="input_filed"> 
+                <div class="form-v3">
+                  <div class="input_box">
+                    <div class="input-field full_">
+                      <input id="f_name" type="text" class="">
+                      <label for="f_name">Enter email address</label>
+                    </div>
+                    <button type="submit" class="btn"><img src="assets/images/arrow-img.svg" /></button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
   
 </main>
+
+<script>
+ 
+</script>
 
 
 <script src="assets/scripts/lib/modernizr.min.js"></script>
@@ -470,50 +659,43 @@ INSPIRED</h2>
 
 
     
-</script><footer>
+</script><footer class="footer">
   <div class="container">
 
-    <div class="social_wrap_box">
-      <ul>
-        <li>
-          <a href="#" class="link_">
-            <svg viewBox="0 0 23.333 18.958">
-              <path
-                d="M23.333,66.244A9.974,9.974,0,0,1,20.577,67a4.757,4.757,0,0,0,2.1-2.644,9.56,9.56,0,0,1-3.033,1.158,4.783,4.783,0,0,0-8.275,3.271,4.926,4.926,0,0,0,.111,1.091,13.54,13.54,0,0,1-9.86-5,4.785,4.785,0,0,0,1.47,6.393,4.724,4.724,0,0,1-2.161-.589v.053a4.806,4.806,0,0,0,3.832,4.7,4.775,4.775,0,0,1-1.254.157,4.229,4.229,0,0,1-.906-.082,4.829,4.829,0,0,0,4.47,3.332,9.612,9.612,0,0,1-5.931,2.04A8.959,8.959,0,0,1,0,80.812a13.467,13.467,0,0,0,7.338,2.147A13.521,13.521,0,0,0,20.953,69.346c0-.211-.007-.416-.018-.618A9.543,9.543,0,0,0,23.333,66.244Z"
-                transform="translate(0 -64)" />
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="link_">
-            <svg viewBox="0 0 20.443 20.02">
-              <g transform="translate(0 -0.389)">
-                <rect width="4.572" height="14.054" transform="translate(0 6.353)" />
-                <path
-                  d="M170.635,160.165c-.049-.015-.095-.032-.146-.046s-.123-.026-.185-.036a4.1,4.1,0,0,0-.82-.083h0a6.352,6.352,0,0,0-4.913,2.687V160H160v14.054h4.572v-7.666s3.455-4.812,4.913-1.278v8.944h4.57V164.57A4.558,4.558,0,0,0,170.635,160.165Z"
-                  transform="translate(-153.612 -153.647)" />
-                <circle cx="2" cy="2" r="2" transform="translate(0 0.389)" />
-              </g>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="link_">
-            <svg viewBox="0 0 20.443 20.442">
-              <path
-                d="M14.054,0H6.388A6.389,6.389,0,0,0,0,6.388v7.666a6.389,6.389,0,0,0,6.388,6.388h7.666a6.389,6.389,0,0,0,6.388-6.388V6.388A6.389,6.389,0,0,0,14.054,0Zm4.472,14.054a4.477,4.477,0,0,1-4.472,4.472H6.388a4.477,4.477,0,0,1-4.472-4.472V6.388A4.477,4.477,0,0,1,6.388,1.917h7.666a4.477,4.477,0,0,1,4.472,4.472Z" />
-              <path
-                d="M133.111,128a5.111,5.111,0,1,0,5.111,5.111A5.111,5.111,0,0,0,133.111,128Zm0,8.3a3.194,3.194,0,1,1,3.194-3.194A3.2,3.2,0,0,1,133.111,136.3Z"
-                transform="translate(-122.889 -122.889)" />
-              <ellipse cx="0.681" cy="0.681" rx="0.681" ry="0.681" transform="translate(15.034 4.046)" />
-            </svg>
-          </a>
-        </li>
-      </ul>
+    <div class="inner_">
+      <div class="lf_">
+        <div class="img_wrap">
+          <img src="assets/images/white-logo.svg">
+        </div>
+        <div class="social_">
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div class="copy_write">
+          <p>The Exchange © 2022.<br/> All Rights Reserved</p>
+        </div>
+      </div>
+      <div class="rgt_">
+        <div class="box_">
+          <h3>Location</h3>
+          <p>The Exchange is located on Level 1, opposite the Coffee Club</p>
+        </div>
+        <div class="box_">
+          <h3>Opening Times</h3>
+          <p>Saturday – Wednesday <span> 10:00 am –10.00 pm</span></p>
+          <p>Thursday – <span> Friday 10:00 am –12.00 am</span></p>
+        </div>
+        <div class="box_">
+          <h3>Parking</h3>
+          <p>The best way to get to The Exchange is to park in the Hypermarket Parking</p>
+        </div>
+      </div>
     </div>
-    <div class="inner center">
-      <p>Copyright © 2021 All rights reserved. Ministry of Industry and Advanced Technology</p>
-    </div>
+
   </div>
   <div class="progress-wrap">
     <div class="icon_">
@@ -529,9 +711,47 @@ INSPIRED</h2>
       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
     </svg>
   </div>
-</footer>
+</footer><script src="assets/scripts/vendor/gsap.min.js"></script>
+<script src="assets/scripts/vendor/ScrollTrigger.min.js"></script>
 <script>
   $('select').selectric({ disableOnMobile: false, nativeOnMobile: false });
+   gsap.registerPlugin(ScrollTrigger);
+    gsap.timeline({
+        scrollTrigger: {
+          trigger: ".home-banner",
+          start: "top top",
+          pin: false,
+          //markers: true,
+          scrub: 1,
+          // once: true
+        }
+      })
+      .to(".home-banner .banner_cap", { top: -350, duration: 0.5 , ease: "power2" })
+
+       gsap.timeline({
+        scrollTrigger: {
+          trigger: ".about_sec ",
+          start: "top top",
+          pin: false,
+          //markers: true,
+          scrub: 1,
+          // once: true
+        }
+      })
+      .to(".about_sec .img_wrap", { top: -50, duration: 0.5 , ease: "power4" })
+
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".about_sec ",
+          start: "top top",
+          pin: false,
+          //markers: true,
+          scrub: 1,
+          // once: true
+        }
+      })
+      .to(".about_sec .text_wrap", { top: -80, duration: 0.5 , ease: "power4" })
+
 </script>
 </body>
 

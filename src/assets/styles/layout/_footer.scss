@@ -1,111 +1,107 @@
-footer {
-  color: $color-black;
-  overflow: hidden;
-  z-index: 99;
-  position: relative;
-  padding: 1rem 0 1.5rem;
-  @media screen and (max-width: 767px) {
-    padding: 1rem 0;
+.footer {
+  background: $brand-color;
+  padding: 10vh 0;
+  @media only screen and(max-width:767px){
+    padding: 5vh 0;
   }
-  p {
-    margin: 0;
-    font-weight: 400;
-  }
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-
-  }
-
-  .social_wrap_box {
-    z-index: 10;
-    display: none;
-    @media screen and (max-width: 767px) {
-      width: 100%;
+  .inner_{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media only screen and(max-width:767px){
+      grid-template-columns: 1fr;
     }
-    ul {
-      list-style: none;
+    p{
+      font-size: 1vw;
+      color: $brand-bg; 
       margin: 0;
-      padding: 0;
-      display: flex;
-      @media screen and (max-width: 767px) {
-        justify-content: center;
+      width: 60%;
+      font-weight: 500;
+      @media only screen and(max-width:768px){
+        font-size: 1.4vw;
       }
-      li {
-        margin-inline-end: 0.5rem;
-        &:last-child {
-          margin-inline-end: 0;
+      @media only screen and(max-width:767px){
+        font-size: .9rem;
+      }
+      span{
+        font-weight: 700;
+      }
+    }
+    .lf_{
+      display: flex;
+      flex-direction: column;
+      .img_wrap{
+        position: relative;
+        width: 40%;
+        padding-top: 17%;
+        img{
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      .social_{
+        margin-top: 6em;
+        @media only screen and(max-width:768px){
+          margin-top: 2em;
+        }
+        ul{
+          padding: 0;
+          margin: 0;
+          @media only screen and(max-width:767px){
+            display: flex;
+            flex-wrap: wrap;
+            grid-gap: 0.8em;
+            align-items: center;
+            margin-bottom: 1em;
+          }
+          li{
+            list-style: none;
+            
+            a{
+              color: $brand-bg;
+              margin: .5em 0;
+              font-size: 1.8vw;
+              font-weight: 500;
+              @media only screen and(max-width:768px){
+                font-size: 2.4vw;
+              }
+              @media only screen and(max-width:767px){
+                font-size: 1.3rem;
+              }
+            }
+          }
+        }
+      }
+      .copy_write{
+        display: flex;
+        flex: 1;
+        align-items: flex-end;
+        p{
+          border-top: 1px solid rgba(255,255,255,.25);
+          width: 80%;
+          padding-top: 1em;
         }
       }
     }
-    a {
-      width: 35px;
-      height: 35px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease-in-out;
-      position: relative;
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba($brand-color, 0.3);
-        transform: scale(0);
-        border-radius: 50%;
-        z-index: -1;
-        transition: all 0.3s ease-in-out;
+    .rgt_{
+      margin-top: 30%;
+      @media only screen and(max-width:1024px){
+        margin-top: 10%;
       }
-      &:hover {
-        transform: scale(1.1);
-        &::before {
-          transform: scale(1);
-        }
-      }
-      svg {
-        width: 17px;
-        height: auto;
-        max-height: 17px;
-      }
-    }
-  }
-
-  .inner {
-    // max-width: 40%;
-    @media only screen and (max-width: 1024px) {
-      // max-width: 60%;
-    }
-    @media screen and (max-width: 767px) {
-      max-width: 100%;
-      margin-top: 0.5rem;
-      text-align: center;
-    }
-    p {
-      font-size: 0.85rem;
-    }
-
-    .nave_link_box {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-
-      li {
-        .link_ {
-          padding: 0 1em;
-          color: #000;
-          font-weight: 400;
-          font-size: 0.9rem;
-
-          &:hover {
-            color: $brand-color;
+      .box_{
+        margin-bottom: 2em;
+        h3{
+          font-size: 1.8vw;
+          font-weight: 500;
+          color: $color-white;
+          line-height: 1;
+          margin: 0 0 .5em;
+          @media only screen and(max-width:767px){
+            font-size: 1.2rem;
           }
         }
       }

@@ -6,67 +6,87 @@ html[dir="rtl"] body {
   * {
     letter-spacing: 0;
   }
+  .home-banner{
+    .banner_cap{
+      left: auto;
+      right: 12%;
+    }
+  } 
+  .btn_wrap{
+    a span{
+      transform: scaleX(-1);
+    }
+  } 
+  .comunity_sec{
+    .center_div {
+      .text_{
+        .content_{
+          left: auto;
+          right: -27%;
+        }
+      } 
+      &:nth-of-type(4){
+        .text_{
+          .content_{
+            left: -27%;
+            right: auto; 
+          }
+        } 
+      }
+    }
+    
+    .lf_div{
+      .text_{
+        .content_{
+          left: auto;
+          right: 15%;
+        }
+      }
+    } 
+    .rgt_div{
+      float: left;
+      .text_{
+        .content_{
+          left: auto;
+          right: -30%;
+        }
+      } 
+    }
+  } 
+
+  .keep_know{
+    .kn_img{
+      right: auto;
+      left: 0;
+    }
+    .inner_ .lf_ .subscrib_bx .btn{
+      transform: scaleX(-1);
+    }
+  } 
+
+  .inspire_sec{
+    .inner_{
+      .insp_box_{
+        .involed_wraper{
+          .box_{
+            .bx_btm{
+              .rgster{
+                span{
+                  transform: scaleX(-1);
+                }
+              }
+            } 
+          } 
+        } 
+      } 
+    } 
+  } 
+  .cta_link span svg{
+    transform: scaleX(-1);
+  }
+
 }
 
-.bottom_svg {
-  right: calc(35vw - 2px);
-  left: auto;
-  @media only screen and (max-width: 980px) {
-    right: calc(50vw - 2px);
-  }
-}
-.home-banner .social_wrap {
-  left: 1rem;
-  right: auto;
-}
-.banner_text h1 {
-  font-size: clamp(3.5rem, 8vw, 7rem);
-  @media only screen and (max-width: 980px) {
-    font-size: clamp(2.5rem, 15vw, 7rem);
-  }
-  div {
-    transform: translateX(-8rem);
-  }
-}
-.about_wrap {
-  .bg_svg {
-    right: 0;
-    left: auto;
-  }
-  .img_2 {
-    right: 0;
-    left: auto;
-    &::before {
-      left: -1rem;
-      right: auto;
-    }
-  }
-}
-.ob_item {
-  border-left: 2px dashed $brand-color;
-  border-right: none;
-  &.swiper-slide-next ~ .ob_item {
-    border-left: none;
-  }
-  @media only screen and (max-width: 980px) {
-    &.swiper-slide-next {
-      border-left: none;
-    }
-  }
-  @media only screen and (max-width: 767px) {
-    border: none;
-  }
-  .number_ {
-    right: 0;
-    left: auto;
-  }
-}
-.title_tool_wrap .link_ {
-  font-size: clamp(1rem, 1.4vw, 1.2rem);
-  @media only screen and (max-width: 1024px) {
-    font-size: clamp(0.95rem, 6vw, 1.25rem);
-  }
-}
 @media only screen and (min-width: 1025px) {
 }
 
