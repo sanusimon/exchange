@@ -21,6 +21,7 @@
       }
       @media only screen and(max-width:767px){
         font-size: .9rem;
+        width: 100%;
       }
       span{
         font-weight: 700;
@@ -72,6 +73,9 @@
               @media only screen and(max-width:767px){
                 font-size: 1.3rem;
               }
+              &:hover{
+                color: $brand-color-2;
+              }
             }
           }
         }
@@ -101,10 +105,22 @@
           line-height: 1;
           margin: 0 0 .5em;
           @media only screen and(max-width:767px){
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+          }
+        }
+        .btn_wrap{
+          a{
+            margin-top: 0;
+            span{
+              img{
+                
+              }
+            }
+            
           }
         }
       }
     }
   }
 }
+

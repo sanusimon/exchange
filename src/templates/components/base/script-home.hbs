@@ -4,8 +4,122 @@
 <script src="{{assets}}/scripts/min/home_plugins.js"></script>
 <script src="{{assets}}/scripts/min/home.js"></script>
 
+<script src="{{assets}}/scripts/vendor/gsap.min.js"></script>
+<script src="{{assets}}/scripts/vendor/ScrollTrigger.min.js"></script>
+
 <script>
+  $('select').selectric({ disableOnMobile: false, nativeOnMobile: false });
 
+ /* const scroller = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true
+  });
+  */
 
+$(document).ready(function(){
     
+})
+   gsap.registerPlugin(ScrollTrigger);
+    var window_width_ = $(window).width();
+
+        if(window_width_ > 768){
+
+                let container = document.querySelector("#scroll-container");
+
+                let height;
+                function setHeight() {
+                height = container.clientHeight;
+                document.body.style.height = height + "px";
+                }
+                ScrollTrigger.addEventListener("refreshInit", setHeight);
+
+                // smooth scrolling container
+                gsap.to(container, {
+                y: () => - (height - document.documentElement.clientHeight),
+                ease: "none",
+                scrollTrigger: {
+                    trigger: document.body,
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1,
+                    invalidateOnRefresh: true
+                }
+                });
+
+
+
+
+            gsap.timeline({
+                scrollTrigger: {
+                trigger: ".home-banner",
+                start: "top top",
+                pin: false,
+                //markers: true,
+                scrub: 1,
+                // once: true
+                }
+            })
+            .to(".home-banner .banner_cap", { top: -250, duration: 0.5 , ease: "power2" })
+
+            gsap.timeline({
+                scrollTrigger: {
+                trigger: ".about_sec ",
+                start: "top top",
+                pin: false,
+                //markers: true,
+                scrub: 1,
+                // once: true
+                }
+            })
+            .to(".about_sec .img_wrap", { top: -50, duration: 0.5 , ease: "power4" })
+
+            gsap.timeline({
+                scrollTrigger: {
+                trigger: ".about_sec ",
+                start: "top top",
+                pin: false,
+                //markers: true,
+                scrub: 1,
+                // once: true
+                }
+            })
+            .to(".about_sec .text_wrap", { top: -80, duration: 0.5 , ease: "power4" })
+
+            gsap.timeline({
+                scrollTrigger: {
+                trigger: ".comunity_sec",
+                start: "top top",
+                pin: false,
+                //markers: true,
+                scrub: 1,
+                // once: true
+                }
+            })
+            .to(".comunity_sec .comn_box .img_div .img_wrap", { top: 50, duration: 0.5 , ease: "power4" })
+
+            gsap.timeline({
+                scrollTrigger: {
+                trigger: ".comunity_sec",
+                start: "top top",
+                end: '+=50000px',
+                pin: false,
+                //markers: true,
+                scrub: 1,
+                // once: true
+                }
+            })
+            .to(".comunity_sec .text_ .content_", { top: 80, duration: 0.5 , ease: "power4" })
+
+            gsap.timeline({
+                scrollTrigger: {
+                trigger: ".inspire_sec .inner_",
+                start: "top top",
+                pin: false,
+                //markers: true,
+                scrub: 1,
+                // once: true
+                }
+            })
+            .to(".inspire_sec .inner_ .title_ h2 span", { top: -250, duration: 0.5 , ease: "power2" })
+        }
 </script>

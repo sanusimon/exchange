@@ -187,6 +187,9 @@ header {
         @media only screen and (max-width: 1300px) {
           max-width: 300px;
         }  
+        @media only screen and (max-width: 767px) {
+          max-width: 100px;
+        }  
       }
     }
 
@@ -219,13 +222,10 @@ header {
       margin: 0;
       padding: 0;
       display: grid;
-      grid-template-columns: 1fr 35px 1fr;
+      
       grid-gap: 0.9rem;
       z-index: 10;
       width: 100%;
-      @media only screen and (max-width: 1023px) {
-        grid-template-columns: 1fr 35px;
-      }
       li {
         height: auto;
         display: flex;
@@ -275,8 +275,11 @@ header {
     a{
       border: 1px solid $brand-color;
       color: $brand-color;
-      padding: 0.3em 1em;
+      padding: 0.6em 1em;
       font-weight: 700;
+      @media only screen and(max-width:767px){
+        font-size:1rem;
+      } 
     }
   }
   .lang_ {
@@ -292,8 +295,7 @@ header {
     font-size: 16px;
     transition: all 0.3s ease-in-out;
     &:hover {
-      background-color: rgba($color-white, 0.5);
-      transform: scale(1.1);
+      
     }
   }
   .mn_link {

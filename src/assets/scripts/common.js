@@ -302,5 +302,7 @@ var pgs_ = {
   
 };
 
-$("body").css("--top_off", $("header").outerHeight() + "px");
+$(document).ready(function(){
+  $("body").css("--top_off", $("header").outerHeight() + "px");
+})
 

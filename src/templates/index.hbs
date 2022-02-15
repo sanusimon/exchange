@@ -1,10 +1,12 @@
 {{> header}}
 {{> loader}}
-<main>
+<div id="viewport">
+<main id="scroll-container">
   {{> banner}}
   
-    <section class="home-section about_sec">
+    <section class="home-section about_sec" id="about">
       <div class="container">
+        <div class="about_link_"><span>About The Exchange</span></div>
         <div class="inner_">
           <div class="img_wrap">
               <picture>
@@ -23,17 +25,17 @@
               <p>Here, you can also learn more about Ma’an, and take steps towards growing your own enterprise.</p>
             </div>
             <div class="btn_wrap">
-              <a href="#">This years themes <span> <img src="{{assets}}/images/arrow-svg.svg" /> </span> </a>
+              <a href="#the-exchange" data-href="#the-exchange" class="nav-link scroll" aria-title="">This years themes <span> <img src="{{assets}}/images/arrow-svg.svg" /> </span> </a>
             </div>
           </div>
         </div>
-        <div class="about_link_"><span>About The Exchange</span></div>
       </div>
     </section>
 
-    <section class="home-section comunity_sec">
+    <section class="home-section comunity_sec" id="the-exchange">
+      {{!-- <div class="about_link_"><span>About The Exchange</span></div> --}}
       <div class="inner_">
-        <div class="center_div">
+        <div class="center_div comn_box">
           <div class="half_ text_">
             <div class="content_">
                 <h2>JOIN OUR <br /> COMMUNITY</h2>
@@ -53,7 +55,7 @@
           </div>
         </div>
 
-        <div class="lf_div">
+        <div class="lf_div comn_box">
           <div class="half_ text_">
             <div class="content_">
                 <h2>GET<br />
@@ -74,7 +76,7 @@ INSPIRED</h2>
           </div>
         </div>
 
-        <div class="rgt_div">
+        <div class="rgt_div comn_box">
           <div class="half_ text_">
             <div class="content_">
                 <h2>LEARN FROM <br/> OTHERS</h2>
@@ -94,7 +96,7 @@ INSPIRED</h2>
           </div>
         </div>
 
-        <div class="center_div reverse_">
+        <div class="center_div reverse_ comn_box">
           <div class="half_ text_">
             <div class="content_">
                 <h2>MAKE NEW <br/> CONNECTIONS</h2>
@@ -114,14 +116,14 @@ INSPIRED</h2>
           </div>
         </div>
 
-        <div class="center_div">
+        <div class="center_div comn_box">
           <div class="half_ text_">
             <div class="content_">
                 <h2>GET<br/> INVOLVED</h2>
                 <div class="text_box">
                   <p>Join collaborative discussions and hands-on workshops where you can share ideas for impact.</p>
                 </div>
-                <a class="cta_link" href="#">CTA link 
+                {{!-- <a class="cta_link" href="#">CTA link 
                   <span class="svg_arow">
                     <svg viewBox="0 0 36.713 19.129">
                       <defs>
@@ -138,7 +140,7 @@ INSPIRED</h2>
                     </svg>
 
                   </span>
-                </a>
+                </a> --}}
               </div>
           </div>
           <div class="half_ img_div">
@@ -271,10 +273,10 @@ INSPIRED</h2>
       <div class="container">
         <div class="inner_">
           <div class="title_">
-            <h2>TOGETHER <br/> WE <br/> INPIRE <span> OUR <br/> COMMUNITY</span></h2>
+            <h2> <span><span>TOGETHER </span></span> <br/> <span><span>WE</span></span>   <br/> <span><span>INPIRE</span></span>   <span><span> OUR </span> </span><br/> <span><span>COMMUNITY </span> </span> </h2>
           </div>
 
-          <div class="insp_box_">
+          <div class="insp_box_"  id="get-involved">
             <div class="title_field">
               <h3 class="title_">Get Involved</h3>
               <div class="filter_box"> 
@@ -488,62 +490,7 @@ INSPIRED</h2>
                   </a>
                 </div>
               </div>
-              <div class="box_" style="background: #541226;">
-                <div class="top_content_">
-                  <h3 style="color: #6E72BF;">MA’AN FAMILY</h3>
-                  <div class="date_">11 February 2020 <span class="date_spn"> 2.00 pm - 4.45 pm</span></div>
-                  <h2 style="color: #6E72BF;">Question and Answer Session for CEO of Lorem Ipsum - Kholoud Mustafi</h2>
-                </div>
-                <div class="bx_btm">
-                  <a href="#" class="rd_more">Read More</a>
-                  <a href="#" class="rgster" style="color: #6E72BF;">Register
-                    <span class="svg_arow">
-                      <svg viewBox="0 0 36.713 19.129">
-                        <defs>
-                          <clipPath id="clip-path">
-                            <rect id="Rectangle_4" data-name="Rectangle 4" width="36.713" height="19.129" fill="none" stroke="#6E72BF" stroke-linecap="square" stroke-width="1"/>
-                          </clipPath>
-                        </defs>
-                        <g id="Group_77" data-name="Group 77" transform="translate(0 0)">
-                          <g id="Group_54" data-name="Group 54" transform="translate(0 0)" clip-path="url(#clip-path)">
-                            <path id="Path_54" data-name="Path 54" d="M70.927.353l9.43,9.43-9.43,9.43" transform="translate(-43.914 -0.219)" fill="none" stroke="#6E72BF" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
-                            <path id="Path_55" data-name="Path 55" d="M0,25.114H36.443" transform="translate(0 -15.549)" fill="none" stroke="#6E72BF" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
-                          </g>
-                        </g>
-                      </svg>
-
-                    </span>
-                  </a>
-                </div>
-              </div>
-              <div class="box_" style="background: #3F1C8E;">
-                <div class="top_content_">
-                  <h3 style="color: #89D2D1;">WORKSPACE</h3>
-                  <div class="date_">11 February 2020 <span class="date_spn"> 2.00 pm - 4.45 pm</span></div>
-                  <h2 style="color: #89D2D1;">Question and Answer Session for CEO of Lorem Ipsum - Kholoud Mustafi</h2>
-                </div>
-                <div class="bx_btm">
-                  <a href="#" class="rd_more">Read More</a>
-                  <a href="#" class="rgster" style="color: #89D2D1;">Register
-                    <span class="svg_arow">
-                      <svg viewBox="0 0 36.713 19.129">
-                        <defs>
-                          <clipPath id="clip-path">
-                            <rect id="Rectangle_4" data-name="Rectangle 4" width="36.713" height="19.129" fill="none" stroke="#89D2D1" stroke-linecap="square" stroke-width="1"/>
-                          </clipPath>
-                        </defs>
-                        <g id="Group_77" data-name="Group 77" transform="translate(0 0)">
-                          <g id="Group_54" data-name="Group 54" transform="translate(0 0)" clip-path="url(#clip-path)">
-                            <path id="Path_54" data-name="Path 54" d="M70.927.353l9.43,9.43-9.43,9.43" transform="translate(-43.914 -0.219)" fill="none" stroke="#89D2D1" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
-                            <path id="Path_55" data-name="Path 55" d="M0,25.114H36.443" transform="translate(0 -15.549)" fill="none" stroke="#89D2D1" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
-                          </g>
-                        </g>
-                      </svg>
-
-                    </span>
-                  </a>
-                </div>
-              </div>
+              
               <div class="box_ load_more" style="background: #fff;">
                 <a href="#" class="btn_">Load More <span class="plus">+</span> </a>
               </div>
@@ -570,7 +517,7 @@ INSPIRED</h2>
           <div class="lf_"> 
             <h2>KEEP IN THE KNOW</h2>
             <div class="text_box">
-              <p>Subscribe to our newsletter to keep updated on all the lorem ipsum dolor audere est</p>
+              <p>Subscribe to our newsletter to stay updated.</p>
             </div>
             <div class="subscrib_bx">
               <div class="input_filed"> 
@@ -589,55 +536,11 @@ INSPIRED</h2>
         </div>
       </div>
     </section>
-  
-</main>
-
-<script>
- 
-</script>
 
 
-{{> script-home}}
+
+
+
 {{> footer}}
-<script src="{{assets}}/scripts/vendor/gsap.min.js"></script>
-<script src="{{assets}}/scripts/vendor/ScrollTrigger.min.js"></script>
-<script>
-  $('select').selectric({ disableOnMobile: false, nativeOnMobile: false });
-   gsap.registerPlugin(ScrollTrigger);
-    gsap.timeline({
-        scrollTrigger: {
-          trigger: ".home-banner",
-          start: "top top",
-          pin: false,
-          //markers: true,
-          scrub: 1,
-          // once: true
-        }
-      })
-      .to(".home-banner .banner_cap", { top: -350, duration: 0.5 , ease: "power2" })
+{{> script-home}}
 
-       gsap.timeline({
-        scrollTrigger: {
-          trigger: ".about_sec ",
-          start: "top top",
-          pin: false,
-          //markers: true,
-          scrub: 1,
-          // once: true
-        }
-      })
-      .to(".about_sec .img_wrap", { top: -50, duration: 0.5 , ease: "power4" })
-
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".about_sec ",
-          start: "top top",
-          pin: false,
-          //markers: true,
-          scrub: 1,
-          // once: true
-        }
-      })
-      .to(".about_sec .text_wrap", { top: -80, duration: 0.5 , ease: "power4" })
-
-</script>
