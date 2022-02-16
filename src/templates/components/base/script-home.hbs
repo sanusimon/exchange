@@ -17,21 +17,44 @@
   */
 
 $(document).ready(function(){
-    
+    var banner_slider = new Swiper('.banner_img .swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        navigation:{
+            nextEl : '.banner_img .next_',
+            prevEl : '.banner_img .prev_',
+        },
+        on: {
+            init: function() {
+                1 == $(this)[0].snapGrid.length && ($(".banner_img .next_").hide(), 
+                $(".banner_img .prev_").hide());
+            }
+        }
+    });
 })
+
+
+
+
    gsap.registerPlugin(ScrollTrigger);
     var window_width_ = $(window).width();
 
         if(window_width_ > 768){
 
-                let container = document.querySelector("#scroll-container");
+                var container = document.querySelector("#scroll-container");
 
-                let height;
+                var height;
                 function setHeight() {
-                height = container.clientHeight;
-                document.body.style.height = height + "px";
+                    height = container.clientHeight;
+                    document.body.style.height = height + "px";
                 }
                 ScrollTrigger.addEventListener("refreshInit", setHeight);
+                ScrollTrigger.addEventListener("load", setHeight);
 
                 // smooth scrolling container
                 gsap.to(container, {
@@ -122,4 +145,8 @@ $(document).ready(function(){
             })
             .to(".inspire_sec .inner_ .title_ h2 span", { top: -250, duration: 0.5 , ease: "power2" })
         }
+
+    
+
+
 </script>

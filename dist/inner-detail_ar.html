@@ -1,295 +1,221 @@
-{{> header}}
-{{> loader}}
-<div id="viewport">
-<main id="scroll-container">
-  {{> banner}}
-  
-    <section class="home-section about_sec" id="about">
-      <div class="container">
-        <div class="about_link_"><span>About The Exchange</span></div>
-        <div class="inner_">
-          <div class="img_wrap">
-              <picture>
-                <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
-                <source srcset="assets/images/about-img.jpg" type="image/jpeg">
-                <img src="assets/images/about-img.jpg" loading="lazy" alt="">
-            </picture>
-          </div>
-          <div class="text_wrap">
-            <h3>Meet the people making an impact in Abu Dhabi & see how your ideas can change our society.</h3>
-            <div class="text_box">
-              <p>The Exchange by the Authority of Social Contribution Ma’an is a space for everyone.</p>
+<!DOCTYPE html>
+<html class="rtl" dir="rtl" lang="ar">
 
-              <p>In this social innovation platform, you can find <span class="yellow_txt"> inspiration, join a free workshop,</span> and <span class="yellow_txt"> meet like-minded people</span> who are passionate about helping others.</p>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Exchange</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="preload" href="assets/images/logo.png" as="image">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-              <p>Here, you can also learn more about Ma’an, and take steps towards growing your own enterprise.</p>
-            </div>
-            <div class="btn_wrap">
-              <a href="#the-exchange" data-href="#the-exchange" class="nav-link scroll" aria-title="">This years themes <span> <img src="{{assets}}/images/arrow-svg.svg" /> </span> </a>
-            </div>
-          </div>
+    <link rel="stylesheet" href="assets/styles/page.css">
+    <link rel="stylesheet" href="assets/styles/page-rtl.css">
+
+    <style>
+        .loader {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99999999;
+            background: #e2503f;
+            margin: auto;
+            -webkit-transition: width .5s ease-in-out, height .5s ease-in-out, opacity .3s .5s ease-in-out, visibility .3s .5s ease-in-out, clip-path 1s ease-in-out;
+            -o-transition: width .5s ease-in-out, height .5s ease-in-out, opacity .3s .5s ease-in-out, visibility .3s .5s ease-in-out , clip-path 1s ease-in-out;
+            transition: width .5s ease-in-out, height .5s ease-in-out, opacity .3s .5s ease-in-out, visibility .3s .5s ease-in-out , clip-path 1s ease-in-out;
+            /*clip-path: ellipse(100% 74% at 48% 44%);*/
+        }
+    
+        .loader .loader-block {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            -webkit-transition: all .4s .1s ease-in-out;
+            -o-transition: all .4s .1s ease-in-out;
+            transition: all .4s .1s ease-in-out
+        }
+    
+        .loader .loader-img {
+            margin: 35px 0;
+            text-align: center
+        }
+    
+        .loader .loader-img img {
+            max-width: 320px;
+            width: 100%;
+            height: auto
+        }
+    
+        .is-loaded .loader {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            /*clip-path: ellipse(100% 55% at 48% -55%); */
+        }
+    
+        .is-loaded .loader .loader-block {
+            opacity: 0;
+            -webkit-transform: translateY(2em) scale(.5);
+            -ms-transform: translateY(2em) scale(.5);
+            transform: translateY(2em) scale(.5)
+        }
+    
+        .loader .loader-img {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+    
+        .loader .loader-img img {
+            max-height: 90px;
+            margin: 0 10px;
+        }
+    </style></head>
+
+<body class="inner__page __inner-detail_ar">
+    <header id="header">
+      <div class="navbar ">
+        <div class="barnd_box left_">
+          <a class="navbar-brand" href="index.html" title="">
+            <img src="assets/images/logo.svg" alt="">
+          </a>
         </div>
+        <div class="nav_box_wrapper" id="master_menu"> 
+    
+          <nav class="navbar-inner">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a href="#about" data-href="#about" class="nav-link scroll" aria-title="">
+                  <span>ABOUT</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#the-exchange" data-href="#the-exchange" class="nav-link scroll" aria-title="">
+                  <span>THE EXCHANGE</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#plan-visit" data-href="#plan-visit" class="nav-link scroll" aria-title="">
+                  <span>PLAN YOUR VISIT</span>
+                </a>
+              </li>
+    
+               <li class="hdr_btn nav-item">
+                <a href="#get-involved" data-href="#get-involved" class="nav-link scroll" aria-title=""><span>GET INVOLVED</span></a>
+              </li>
+              
+              <li class="no_hide">
+              <a class="lang_ " href="inner-detail.html" title=""><span>ع</span></a>
+            </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="hd_nav_box">
+          <ul>
+            <li class="no_hide">
+              <button class="menu_trigger" data-traget="master_menu">
+                <div class="box">
+                  <span class="dote_ t_"></span>
+                  <span class="dote_ m_"></span>
+                  <span class="dote_ b_"></span>
+                </div>
+                <div class="box p_">
+                  <span class="dote_ t_"></span>
+                  <span class="dote_ m_"></span>
+                  <span class="dote_ b_"></span>
+                </div>
+              </button>
+            </li>
+          </ul>
+        </div> 
+       
       </div>
-    </section>
+    </header><div class="loader">
+    <div class="loader-block">
+        <div class="loader-img">
+            <img src="assets/images/white-logo.svg" alt="">
 
-    <section class="home-section comunity_sec" id="the-exchange">
-      {{!-- <div class="about_link_"><span>About The Exchange</span></div> --}}
-      <div class="inner_">
-        <div class="center_div comn_box">
-          <div class="half_ text_">
-            <div class="content_">
-                <h2>JOIN OUR <br /> COMMUNITY</h2>
-                <div class="text_box">
-                  <p>Discover the story of Ma’an and social initiatives across Abu Dhabi and exchange your ideas with us</p>
-                </div>
-              </div>
-          </div>
-          <div class="half_ img_div">
-            <div class="img_wrap">
-                <picture>
-                    <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
-                    <source srcset="assets/images/img1.jpg" type="image/jpeg">
-                    <img src="assets/images/img1.jpg" loading="lazy" alt="">
-                </picture>
-              </div>
-          </div>
         </div>
+        <div class="linePreloader"></div>
+    </div>
+</div><div id="viewport">
+<main id="scroll-container">
+  
+  <section class="page-section detail_page_main">
+      <div class="container">
+          <div class="inner_">
+            <div class="lf_">
+                <span style="color: #74D896;">IDEAS LAB</span>
+                <h1 style="color: #00834B;">SEE THROUGH YOUR CHILD’S EYES
+    -HOW TO HANDLE WORRIES </h1>
+                    <div class="date_">
+                        <strong> 11 February 2020 </strong>
+                        2.00 pm - 4.45 pm
+                    </div>
+                    <div class="text_box">
+                        <p>This specialist interactive session invites parents to listen and share ideas on handling their children’s worries as they grow up in a demanding world. </p>
 
-        <div class="lf_div comn_box">
-          <div class="half_ text_">
-            <div class="content_">
-                <h2>GET<br />
-INSPIRED</h2>
-                <div class="text_box">
-                  <p>Learn the uplifting stories of the social enterprises working to improve accessibility and inclusion</p>
-                </div>
-              </div>
-          </div>
-          <div class="half_ img_div">
-            <div class="img_wrap">
-                <picture>
-                    <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
-                    <source srcset="assets/images/img2.jpg" type="image/jpeg">
-                      <img src="assets/images/img2.jpg" loading="lazy" alt="">
-                </picture>
-              </div>
-          </div>
-        </div>
-
-        <div class="rgt_div comn_box">
-          <div class="half_ text_">
-            <div class="content_">
-                <h2>LEARN FROM <br/> OTHERS</h2>
-                <div class="text_box">
-                  <p>Hear insightful and motivating talks, and ask our specialist speakers for their opinions.</p>
-                </div>
-              </div>
-          </div>
-          <div class="half_ img_div">
-            <div class="img_wrap">
-                <picture>
-                    <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
-                    <source srcset="assets/images/img3.jpg" type="image/jpeg">
-                      <img src="assets/images/img3.jpg" loading="lazy" alt="">
-                </picture>
-              </div>
-          </div>
-        </div>
-
-        <div class="center_div reverse_ comn_box">
-          <div class="half_ text_">
-            <div class="content_">
-                <h2>MAKE NEW <br/> CONNECTIONS</h2>
-                <div class="text_box">
-                  <p>Work on your projects and meet your future collaborators.</p>
-                </div>
-              </div>
-          </div>
-          <div class="half_ img_div">
-            <div class="img_wrap">
-                <picture>
-                    <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
-                    <source srcset="assets/images/img4.jpg" type="image/jpeg">
-                    <img src="assets/images/img4.jpg" loading="lazy" alt="">
-                </picture>
-              </div>
-          </div>
-        </div>
-
-        <div class="center_div comn_box">
-          <div class="half_ text_">
-            <div class="content_">
-                <h2>GET<br/> INVOLVED</h2>
-                <div class="text_box">
-                  <p>Join collaborative discussions and hands-on workshops where you can share ideas for impact.</p>
-                </div>
-                {{!-- <a class="cta_link" href="#">CTA link 
-                  <span class="svg_arow">
-                    <svg viewBox="0 0 36.713 19.129">
-                      <defs>
-                        <clipPath id="clip-path">
-                          <rect id="Rectangle_4" data-name="Rectangle 4" width="36.713" height="19.129" fill="none" stroke="#e2503f" stroke-linecap="square" stroke-width="1"/>
-                        </clipPath>
-                      </defs>
-                      <g id="Group_77" data-name="Group 77" transform="translate(0 0)">
-                        <g id="Group_54" data-name="Group 54" transform="translate(0 0)" clip-path="url(#clip-path)">
-                          <path id="Path_54" data-name="Path 54" d="M70.927.353l9.43,9.43-9.43,9.43" transform="translate(-43.914 -0.219)" fill="none" stroke="#e2503f" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
-                          <path id="Path_55" data-name="Path 55" d="M0,25.114H36.443" transform="translate(0 -15.549)" fill="none" stroke="#e2503f" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
-                        </g>
-                      </g>
-                    </svg>
-
-                  </span>
-                </a> --}}
-              </div>
-          </div>
-          <div class="half_ img_div">
-            <div class="img_wrap">
-                <picture>
-                    <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
-                    <source srcset="assets/images/img5.jpg" type="image/jpeg">
-                    <img src="assets/images/img5.jpg" loading="lazy" alt="">
-                </picture>
-              </div>
-          </div>
-        </div>
-
-
-
-
-
-
-        
-          {{!-- <div class="item_">
-            <div class="inn_">
-              <div class="lf_">
-                <div class="content_">
-                  <h2>JOIN OUR <br /> COMMUNITY</h2>
-                  <div class="text_box">
-                    <p>Discover the story of Ma’an and social initiatives across Abu Dhabi and exchange your ideas with us</p>
-                  </div>
-                </div>
-              </div>
-              <div class="rgt_">
+                        <p>Led by children’s author, poet and teacher Liam Kelly, this supportive workshop will help parents identify early signs of anxiety in their children and take steps to help them process it.</p>
+                    </div>
+            </div>
+            <div class="rigt">
                 <div class="img_wrap">
-                  <picture>
-                      <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
-                      <source srcset="assets/images/img1.jpg" type="image/jpeg">
-                      <img src="assets/images/img1.jpg" loading="lazy" alt="">
-                  </picture>
+                    <picture>
+                        <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
+                        <source srcset="assets/images/inner-img.jpg" type="image/jpeg">
+                        <img src="assets/images/inner-img.jpg" loading="lazy" alt="">
+                    </picture>
+                    <div class="register_box" style="background: #00834B;">
+                        <div class="title">
+                            <h3>REGISTER</h3>
+                            <div class="svg_arrow">
+                                <a href="#">
+                                    <svg viewBox="0 0 65 65">
+                                        <g class="anim">
+                                            <path id="Path_58" data-name="Path 58" d="M70.927.353l8.47,8.47-8.47,8.47" transform="translate(-46.663 -0.233)" fill="none" stroke="#00834b" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"/>
+                                            <path id="Path_59" data-name="Path 59" d="M0,25.114H32.734" transform="translate(0 -16.522)" fill="none" stroke="#00834b" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"/>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <label style="color: #74D896;">SESSION CAPACITY</label>
+                            <span>15</span>
+                        </div>
+                        <div class="box">
+                            <label style="color: #74D896;">LANGUAGE</label>
+                            <span>English</span>
+                        </div>
+                        <div class="box">
+                            <label style="color: #74D896;">FORMAT</label>
+                            <span>Ideas Lab</span>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
           </div>
-          <div class="item_">
-            <div class="inn_">
-              <div class="lf_">
-                <div class="content_">
-                  <h2>GET <br /> INSPIRED</h2>
-                  <div class="text_box">
-                    <p>Discover the story of Ma’an and social initiatives across Abu Dhabi and exchange your ideas with us</p>
-                  </div>
-                </div>
-              </div>
-              <div class="rgt_">
-                <div class="img_wrap">
-                  <picture>
-                      <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
-                      <source srcset="assets/images/img2.jpg" type="image/jpeg">
-                      <img src="assets/images/img2.jpg" loading="lazy" alt="">
-                  </picture>
-                </div>
-              </div>
-            </div>
-          </div> --}}
-          {{!-- <div class="item_">
-            <div class="inn_">
-              <div class="lf_">
-                <div class="content_">
-                  <h2>LEARN FROM <br /> OTHERS</h2>
-                  <div class="text_box">
-                    <p>Discover the story of Ma’an and social initiatives across Abu Dhabi and exchange your ideas with us</p>
-                  </div>
-                </div>
-              </div>
-              <div class="rgt_">
-                <div class="img_wrap">
-                  <picture>
-                      <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
-                      <source srcset="assets/images/img3.jpg" type="image/jpeg">
-                      <img src="assets/images/img3.jpg" loading="lazy" alt="">
-                  </picture>
-                </div>
-              </div>
-            </div>
-          </div> --}}
-          {{!-- <div class="item_">
-            <div class="inn_">
-              <div class="lf_">
-                <div class="content_">
-                  <h2>MAKE NEW<br /> CONNECTIONS</h2>
-                  <div class="text_box">
-                    <p>Discover the story of Ma’an and social initiatives across Abu Dhabi and exchange your ideas with us</p>
-                  </div>
-                </div>
-              </div>
-              <div class="rgt_">
-                <div class="img_wrap">
-                  <picture>
-                      <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
-                      <source srcset="assets/images/img4.jpg" type="image/jpeg">
-                      <img src="assets/images/img4.jpg" loading="lazy" alt="">
-                  </picture>
-                </div>
-              </div>
-            </div>
-          </div> --}}
-          {{!-- <div class="item_">
-            <div class="inn_">
-              <div class="lf_">
-                <div class="content_">
-                  <h2>GET<br /> INVOLVED</h2>
-                  <div class="text_box">
-                    <p>Discover the story of Ma’an and social initiatives across Abu Dhabi and exchange your ideas with us</p>
-                  </div>
-                </div>
-              </div>
-              <div class="rgt_">
-                <div class="img_wrap">
-                  <picture>
-                      <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
-                      <source srcset="assets/images/img5.jpg" type="image/jpeg">
-                      <img src="assets/images/img5.jpg" loading="lazy" alt="">
-                  </picture>
-                </div>
-              </div>
-            </div>
-          </div> --}}
-        </div>
-    </section>
+      </div>
+      <div class="banner_bg" style="background: #74D896;">
 
+      </div>
+  </section>
 
-    <section class="home-section inspire_sec">
+<section class="page-section inspire_sec">
       <div class="container">
         <div class="inner_">
-          <div class="title_">
-            <h2> <span><span>TOGETHER </span></span> <br/> <span><span>WE</span></span>   <br/> <span><span>INPIRE</span></span>   <span><span> OUR </span> </span><br/> <span><span>COMMUNITY </span> </span> </h2>
-          </div>
-
           <div class="insp_box_"  id="get-involved">
             <div class="title_field">
-              <h3 class="title_">Get Involved</h3>
-              <div class="filter_box"> 
-                <a href="#" class="filter_">Filter</a>
-                <div class="input-field select_box">
-                  <select name="subject">
-                    <option value="">All</option>
-                    <option value="1">Test</option>
-                    <option value="1">Test</option>
-                  </select>
-                </div>
-                <a href="listing-page.html" class="view_all">View All</a> 
-              </div>
+              <h3 class="title_">Our events you may be interested in…</h3>
             </div>
 
             <div class="involed_wraper">
@@ -300,7 +226,7 @@ INSPIRED</h2>
                   <h2 style="color: #FFD000;">Question and Answer Session for CEO of Lorem Ipsum - Kholoud Mustafi</h2>
                 </div>
                 <div class="bx_btm">
-                  <a href="inner-detail.html" class="rd_more">Read More</a>
+                  <a href="#" class="rd_more">Read More</a>
                   <a href="#" class="rgster" data-fancybox="" data-src="#prgrm_pop" style="color: #FFD000;">
                     Register 
                     <span class="svg_arow">
@@ -491,7 +417,7 @@ INSPIRED</h2>
                 </div>
               </div>
               
-              <div class="box_ load_more" style="background: #fff;">
+              <div class="box_ load_more" style="background: #F5F5F5;">
                 <a href="#" class="btn_">Load More <span class="plus">+</span> </a>
               </div>
             </div>
@@ -502,45 +428,113 @@ INSPIRED</h2>
       </div>
     </section>
 
-    <section class="home-section keep_know">
-      <div class="kn_img">
+
+
+
+<footer class="footer" id="plan-visit">
+  <div class="container">
+
+    <div class="inner_">
+      <div class="lf_">
         <div class="img_wrap">
-          <picture>
-            <!-- <source srcset="assets/images/initiative.webp" type="image/webp">-->
-              <source srcset="assets/images/keep-img.jpg" type="image/jpeg">
-              <img src="assets/images/keep-img.jpg" loading="lazy" alt="">
-            </picture>
-          </div>
+          <img src="assets/images/white-logo.svg">
+        </div>
+        <div class="social_">
+          <ul>
+            <li><a href="https://www.facebook.com/MaanAbuDhabi" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/MaanAbuDhabi/" target="_blank">Instagram</a></li>
+            <li><a href="https://twitter.com/MaanAbuDhabi" target="_blank">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/company/ma-an/" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div class="copy_write">
+          <p>The Exchange © 2022.<br/> All Rights Reserved</p>
+        </div>
       </div>
-      <div class="container">
-        <div class="inner_">
-          <div class="lf_"> 
-            <h2>KEEP IN THE KNOW</h2>
-            <div class="text_box">
-              <p>Subscribe to our newsletter to stay updated.</p>
+      <div class="rgt_">
+        <div class="box_">
+          <h3>Location</h3>
+          <p>The Exchange is located on Level 1, opposite the Coffee Club</p>
+          <div class="btn_wrap">
+              <a href="https://www.google.com/maps/place/Yas+Mall+Hypermaket+Parking/@24.4867364,54.6069424,17z/data=!4m5!3m4!1s0x3e5e457e06d6a9e5:0x39874084ac229b75!8m2!3d24.4867315!4d54.6091311" target="_blank">Get Directions <span> <img src="assets/images/arrow-svg.svg" /> </span> </a>
             </div>
-            <div class="subscrib_bx">
-              <div class="input_filed"> 
-                <div class="form-v3">
-                  <div class="input_box">
-                    <div class="input-field full_">
-                      <input id="f_name" type="text" class="">
-                      <label for="f_name">Enter email address</label>
-                    </div>
-                    <button type="submit" class="btn"><img src="{{assets}}/images/arrow-img.svg" /></button>
-                  </div>
+        </div>
+        <div class="box_">
+          <h3>Opening Times</h3>
+          <p>Saturday – Wednesday <span> 10:00 am –10.00 pm</span></p>
+          <p>Thursday – <span> Friday 10:00 am –12.00 am</span></p>
+        </div>
+        <div class="box_">
+          <h3>Parking</h3>
+          <p>The best way to get to The Exchange is to park in the Hypermarket Parking</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="progress-wrap">
+    <div class="icon_">
+      <svg x="0px" y="0px" viewBox="0 0 21.8 28" overflow="visible" xml:space="preserve">
+        <line fill="none" stroke="#033053" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+          x1="10.9" y1="24.8" x2="10.9" y2="3.7" />
+        <polyline fill="none" stroke="#033053" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+          points="2.7,11.6 
+	10.9,3.3 19.2,11.6 " />
+      </svg>
+    </div>
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+    </svg>
+  </div>
+</footer>
+  </main>
+</div>
+
+<div class="popup popup-small no-padding" id="prgrm_pop" style="background: #0A834B; display: none;">
+   <div class="popup-inner">   
+       <h3 class="popup-title">Quieten your mind – introduction to meditation</h3>
+       <div class="popup-content" >
+        <div class="date_">
+            <div class="icon_">
+              <img src="assets/images/calender-icon.png">
+            </div>
+            <div class="txt_">
+              <strong> 11 February 2020 </strong>
+              2.00 pm - 4.45 pm
+            </div>
+          </div>
+          <div class="input_filed"> 
+            <div class="form-v3">
+              <div class="input_box">
+                <div class="input-field full_">
+                  <input id="name" type="text" class="">
+                  <label for="name">Name</label>
                 </div>
+                <div class="input-field full_">
+                  <input id="mail" type="text" class="">
+                  <label for="mail">Email</label>
+                </div>
+                <div class="input-field full_">
+                  <input id="nmber" type="text" class="">
+                  <label for="nmber">Contact Number</label>
+                </div>
+                <button type="submit" class="btn">REGISTER<span><img src="assets/images/arrow-img.svg"></span></button>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+       </div>
+    </div>
+</div><script src="assets/scripts/lib/modernizr.min.js"></script>
+<script src="assets/scripts/lib/jquery-3.4.1.min.js"></script>
+<script src="assets/scripts/lib/jquery-migrate-3.0.1.min.js"></script>
+<script src="assets/scripts/min/page_plugins.js"></script>
+<script src="assets/scripts/min/page.js"></script>
 
+<script>
+    $('select').selectric({ disableOnMobile: false, nativeOnMobile: false });
+    
+</script>
 
+</body>
 
-
-
-{{> footer}}
-{{> script-home}}
-
+</html>

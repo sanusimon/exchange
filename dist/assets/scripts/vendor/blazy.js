@@ -5,6 +5,8 @@
 */
 (function (root, blazy) {
   
+
+  
   if (typeof define === "function" && define.amd) {
     // AMD. Register bLazy as an anonymous module
     define(blazy);

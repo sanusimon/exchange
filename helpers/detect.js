@@ -61,3 +61,4 @@ module.exports.register = function (Handlebars, options, params) {
     }
   });
 };
+

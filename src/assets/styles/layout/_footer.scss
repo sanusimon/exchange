@@ -1,6 +1,37 @@
+.inner__page{
+  .footer {
+    padding: 10vh 0;
+    @media only screen and(max-width:1500px){
+      padding: 10vh 0;
+    }
+    @media only screen and(max-width:1024px){
+      padding: 10vh 0 10vh;
+    }
+    @media only screen and(max-width:767px){
+      padding: 5vh 0;
+    }
+    
+    .inner_{
+      .lf_{
+        .social_ {
+         
+        }
+      }
+      .rgt_{
+        margin-top: 0;
+      }
+    } 
+  }  
+}
 .footer {
   background: $brand-color;
-  padding: 10vh 0;
+  padding: 10vh 0 15vh;
+  @media only screen and(max-width:1500px){
+    padding: 10vh 0 30vh;
+  }
+  @media only screen and(max-width:1024px){
+    padding: 10vh 0 10vh;
+  }
   @media only screen and(max-width:767px){
     padding: 5vh 0;
   }
@@ -98,6 +129,54 @@
       }
       .box_{
         margin-bottom: 2em;
+        &:first-child{
+          margin-top: 2em;
+        }
+        .subscrib_bx{
+          width: 60%;
+          margin-top: 0;
+          @media only screen and(max-width:768px){
+            width: 90%;
+          }
+          @media only screen and(max-width:767px){
+            width: 100%;
+            margin-top: 2em;
+          }
+          .input_filed{
+            margin: 1em 0 3em;  
+            .form-v3{
+              .input_box{
+                display: flex;
+                justify-content: space-between;
+                border-bottom:1px solid #fff ;
+                .input-field{
+                  flex: 1;
+                  >label{
+                    color: rgba(255,255,255,.5)
+                  }
+                  input{
+                    border-bottom: none !important;
+                    margin: 0;
+                  }
+                }
+                .btn{
+                  img{
+                    transition: all .3s ease;
+                  }
+                  &:hover{
+                    img{
+                      transform: translateX(.5em);
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .btn{
+            border: none;
+            background: transparent;
+          }
+        }
         h3{
           font-size: 1.8vw;
           font-weight: 500;
@@ -124,3 +203,6 @@
   }
 }
 
+.rtl .btn_wrap a span{
+  transform: scaleX(-1);
+}
