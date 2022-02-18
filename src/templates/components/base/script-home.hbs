@@ -46,7 +46,7 @@ $(document).ready(function(){
 
         if(window_width_ > 768){
 
-                var container = document.querySelector("#scroll-container");
+              /*  var container = document.querySelector("#scroll-container");
 
                 var height;
                 function setHeight() {
@@ -67,48 +67,57 @@ $(document).ready(function(){
                     scrub: 1,
                     invalidateOnRefresh: true
                 }
-                });
-
+                }); 
+*/
 
 
 
             gsap.timeline({
                 scrollTrigger: {
-                trigger: ".home-banner",
-                start: "top top",
+                trigger: "body",
+                start: () => "top top",
                 pin: false,
                 //markers: true,
                 scrub: 1,
                 // once: true
                 }
             })
-            .to(".home-banner .banner_cap", { top: -250, duration: 0.5 , ease: "power2" })
-
+            .to(".home-banner .banner_cap h1", { y: -250, duration: 0.5 , ease: "power2" },0)
+            
+            
             gsap.timeline({
                 scrollTrigger: {
-                trigger: ".about_sec ",
-                start: "top top",
+                trigger: ".about_sec",
+                start: () => "top bottom",
+
+                end: () => "+=600%",
                 pin: false,
                 //markers: true,
                 scrub: 1,
                 // once: true
                 }
             })
-            .to(".about_sec .img_wrap", { top: -50, duration: 0.5 , ease: "power4" })
+            .to(".top-bubble", { y: -1000, duration: 0.5 , ease: "power2" },0) 
+            .to(".about_sec .img_wrap", { y: -100, duration: 0.5 , ease: "power2" },0)
+            .to(".about_sec .text_wrap", { y: -200, duration: 0.5 , ease: "power2" },0)
 
             gsap.timeline({
                 scrollTrigger: {
-                trigger: ".about_sec ",
-                start: "top top",
+                trigger: "body",
+                start: () => "top top",
+
+                end: () => "bottom bottom",
                 pin: false,
                 //markers: true,
                 scrub: 1,
                 // once: true
                 }
             })
-            .to(".about_sec .text_wrap", { top: -80, duration: 0.5 , ease: "power4" })
+            .to(".top-bubble", { y : 0 } , { y : -800},0) 
 
-            gsap.timeline({
+            
+
+            gsap.timeline({ 
                 scrollTrigger: {
                 trigger: ".comunity_sec",
                 start: "top top",
@@ -131,19 +140,21 @@ $(document).ready(function(){
                 // once: true
                 }
             })
-            .to(".comunity_sec .text_ .content_", { top: 80, duration: 0.5 , ease: "power4" })
+            .to(".comunity_sec .text_ .content_", { x: 250, duration: 0.5 , ease: "power2" },0)
 
             gsap.timeline({
                 scrollTrigger: {
                 trigger: ".inspire_sec .inner_",
-                start: "top top",
+                start: () => "top bottom",
+                end: () => "+=600%",
                 pin: false,
                 //markers: true,
                 scrub: 1,
                 // once: true
                 }
             })
-            .to(".inspire_sec .inner_ .title_ h2 span", { top: -250, duration: 0.5 , ease: "power2" })
+            .to(".inspire_sec .inner_ .title_ h2", { y: 80, duration: 0.5 , ease: "power2" })
+
         }
 
     

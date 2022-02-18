@@ -97,18 +97,18 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#the-exchange" data-href="#the-exchange" class="nav-link scroll" aria-title="">
+                <a href="index.html#the-exchange" data-href="#the-exchange" class="nav-link scroll" aria-title="">
                   <span>THE EXCHANGE</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#plan-visit" data-href="#plan-visit" class="nav-link scroll" aria-title="">
+                <a href="index.html#plan-visit" data-href="index.html#plan-visit" class="nav-link scroll" aria-title="">
                   <span>PLAN YOUR VISIT</span>
                 </a>
               </li>
     
                <li class="hdr_btn nav-item">
-                <a href="#get-involved" data-href="#get-involved" class="nav-link scroll" aria-title=""><span>GET INVOLVED</span></a>
+                <a href="index.html#get-involved" data-href="#get-involved" class="nav-link scroll" aria-title=""><span>GET INVOLVED</span></a>
               </li>
               
               <li class="no_hide">
@@ -187,8 +187,11 @@
                <span><span>IMPACT </span></span> </h1>
       </div>
       
+  
+  
   </section>  
     <section class="home-section about_sec" id="about">
+      <div class="top-bubble"></div>
       <div class="container">
         <div class="about_link_"><span>About The Exchange</span></div>
         <div class="inner_">
@@ -389,7 +392,7 @@ INSPIRED</h2>
                   <h2 style="color: #89D2D1;">Question and Answer Session for CEO of Lorem Ipsum - Kholoud Mustafi</h2>
                 </div>
                 <div class="bx_btm">
-                  <a href="#" class="rd_more">Read More</a>
+                  <a href="inner-detail.html" class="rd_more">Read More</a>
                   <a href="#" class="rgster" style="color: #89D2D1;">Register
                     <span class="svg_arow">
                       <svg viewBox="0 0 36.713 19.129">
@@ -417,7 +420,7 @@ INSPIRED</h2>
                   <h2 style="color: #00834B;">Question and Answer Session for CEO of Lorem Ipsum - Kholoud Mustafi</h2>
                 </div>
                 <div class="bx_btm">
-                  <a href="#" class="rd_more">Read More</a>
+                  <a href="inner-detail.html" class="rd_more">Read More</a>
                   <a href="#" class="rgster" style="color: #00834B;">Register
                     <span class="svg_arow">
                       <svg viewBox="0 0 36.713 19.129">
@@ -445,7 +448,7 @@ INSPIRED</h2>
                   <h2 style="color: #DEDC2A;">Question and Answer Session for CEO of Lorem Ipsum - Kholoud Mustafi</h2>
                 </div>
                 <div class="bx_btm">
-                  <a href="#" class="rd_more">Read More</a>
+                  <a href="inner-detail.html" class="rd_more">Read More</a>
                   <a href="#" class="rgster" style="color: #DEDC2A;">Register
                     <span class="svg_arow">
                       <svg viewBox="0 0 36.713 19.129">
@@ -473,7 +476,7 @@ INSPIRED</h2>
                   <h2 style="color: #00834B;">Question and Answer Session for CEO of Lorem Ipsum - Kholoud Mustafi</h2>
                 </div>
                 <div class="bx_btm">
-                  <a href="#" class="rd_more">Read More</a>
+                  <a href="inner-detail.html" class="rd_more">Read More</a>
                   <a href="#" class="rgster" style="color: #00834B;">Register
                     <span class="svg_arow">
                       <svg viewBox="0 0 36.713 19.129">
@@ -501,7 +504,7 @@ INSPIRED</h2>
                   <h2 style="color: #98E0D0;">Question and Answer Session for CEO of Lorem Ipsum - Kholoud Mustafi</h2>
                 </div>
                 <div class="bx_btm">
-                  <a href="#" class="rd_more">Read More</a>
+                  <a href="inner-detail.html" class="rd_more">Read More</a>
                   <a href="#" class="rgster" style="color: #98E0D0;">Register
                     <span class="svg_arow">
                       <svg viewBox="0 0 36.713 19.129">
@@ -529,7 +532,7 @@ INSPIRED</h2>
                   <h2 style="color: #C6470A;">Question and Answer Session for CEO of Lorem Ipsum - Kholoud Mustafi</h2>
                 </div>
                 <div class="bx_btm">
-                  <a href="#" class="rd_more">Read More</a>
+                  <a href="inner-detail.html" class="rd_more">Read More</a>
                   <a href="#" class="rgster" style="color: #C6470A;">Register
                     <span class="svg_arow">
                       <svg viewBox="0 0 36.713 19.129">
@@ -596,10 +599,6 @@ INSPIRED</h2>
         </div>
       </div>
     </section>
-
-
-
-
 
 <footer class="footer" id="plan-visit">
   <div class="container">
@@ -742,7 +741,7 @@ $(document).ready(function(){
 
         if(window_width_ > 768){
 
-                var container = document.querySelector("#scroll-container");
+              /*  var container = document.querySelector("#scroll-container");
 
                 var height;
                 function setHeight() {
@@ -763,48 +762,57 @@ $(document).ready(function(){
                     scrub: 1,
                     invalidateOnRefresh: true
                 }
-                });
-
+                }); 
+*/
 
 
 
             gsap.timeline({
                 scrollTrigger: {
-                trigger: ".home-banner",
-                start: "top top",
+                trigger: "body",
+                start: () => "top top",
                 pin: false,
                 //markers: true,
                 scrub: 1,
                 // once: true
                 }
             })
-            .to(".home-banner .banner_cap", { top: -250, duration: 0.5 , ease: "power2" })
-
+            .to(".home-banner .banner_cap h1", { y: -250, duration: 0.5 , ease: "power2" },0)
+            
+            
             gsap.timeline({
                 scrollTrigger: {
-                trigger: ".about_sec ",
-                start: "top top",
+                trigger: ".about_sec",
+                start: () => "top bottom",
+
+                end: () => "+=600%",
                 pin: false,
                 //markers: true,
                 scrub: 1,
                 // once: true
                 }
             })
-            .to(".about_sec .img_wrap", { top: -50, duration: 0.5 , ease: "power4" })
+            .to(".top-bubble", { y: -1000, duration: 0.5 , ease: "power2" },0) 
+            .to(".about_sec .img_wrap", { y: -100, duration: 0.5 , ease: "power2" },0)
+            .to(".about_sec .text_wrap", { y: -200, duration: 0.5 , ease: "power2" },0)
 
             gsap.timeline({
                 scrollTrigger: {
-                trigger: ".about_sec ",
-                start: "top top",
+                trigger: "body",
+                start: () => "top top",
+
+                end: () => "bottom bottom",
                 pin: false,
                 //markers: true,
                 scrub: 1,
                 // once: true
                 }
             })
-            .to(".about_sec .text_wrap", { top: -80, duration: 0.5 , ease: "power4" })
+            .to(".top-bubble", { y : 0 } , { y : -800},0) 
 
-            gsap.timeline({
+            
+
+            gsap.timeline({ 
                 scrollTrigger: {
                 trigger: ".comunity_sec",
                 start: "top top",
@@ -827,19 +835,21 @@ $(document).ready(function(){
                 // once: true
                 }
             })
-            .to(".comunity_sec .text_ .content_", { top: 80, duration: 0.5 , ease: "power4" })
+            .to(".comunity_sec .text_ .content_", { x: 250, duration: 0.5 , ease: "power2" },0)
 
             gsap.timeline({
                 scrollTrigger: {
                 trigger: ".inspire_sec .inner_",
-                start: "top top",
+                start: () => "top bottom",
+                end: () => "+=600%",
                 pin: false,
                 //markers: true,
                 scrub: 1,
                 // once: true
                 }
             })
-            .to(".inspire_sec .inner_ .title_ h2 span", { top: -250, duration: 0.5 , ease: "power2" })
+            .to(".inspire_sec .inner_ .title_ h2", { y: 80, duration: 0.5 , ease: "power2" })
+
         }
 
     

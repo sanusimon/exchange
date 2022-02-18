@@ -17,6 +17,10 @@
         classToAdd: "inView",
         offset: "20%",
       });
+      $(".footer").viewportChecker({
+        classToAdd: "inView",
+        offset: "20%",
+      });
     } else {
       $(".home-section").viewportChecker({
         classToAdd: "inView",
@@ -31,6 +35,10 @@
         offset: "10%",
       });
       $(".inspire_sec .inner_").viewportChecker({
+        classToAdd: "inView",
+        offset: "20%",
+      });
+      $(".footer").viewportChecker({
         classToAdd: "inView",
         offset: "20%",
       });
